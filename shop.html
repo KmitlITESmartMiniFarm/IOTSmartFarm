@@ -10,16 +10,40 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
        
+        <script>
+            $(document).ready(function(){
+              $('.card').hover(
+              // trigger when mouse hoer
+              function(){
+                $(this).animate({
+                  marginTop: "-=1%",
+                },200);
+              },
+
+              //trigger when mouse out 
+              function(){
+                $(this).animate({
+                  marginTop: "0%"
+                },200);
+              }
+              );
+            });
+            </script>
     </head>
 
     <body>
         
         <!-- Menu ! Head -->
-        <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #A5FFD6;">
-                
+        <nav class="navbar navbar-light navbar-expand-lg navbar-static-top">
+          <a class="navbar-brand" href="#" style="font-size:25px;">
+            <img src="img/logo.svg" width="50" height="50" class="d-inline-block align-top" alt="">
+            SmartMiniFarm
+          </a>
+        
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,6 +74,9 @@
                     <li class="nav-item">
                       <a class="nav-link" href="about.html">About</a>
               </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="roadmap.html">Roadmap</a>
+                </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                         </li>
@@ -81,32 +108,32 @@
                             <img class="card-img-top" src="http://do.lnwfile.com/y7dk5l.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                             <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/8y/n2/bo.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                             <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                               <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
                               <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="#" class="btn btn-primary">View</a>
                               </div>
                             </div>
                         </div>
@@ -117,32 +144,32 @@
                             <img class="card-img-top" src="http://www.mythaishop.nl/Files/2/52000/52867/ProductPhotos/MaxContent/246877605.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                             <img class="card-img-top" src="https://fp.lnwfile.com/_/fp/_raw/yh/rt/j1.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                             <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/h4/1w/y0.jpg" alt="Card image cap" width="150px" height="250px">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                           <div class="card">
                               <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
                               <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="#" class="btn btn-primary">View</a>
                               </div>
                             </div>
                         </div>
@@ -150,10 +177,9 @@
                     </div>
                     </div>
                   </div>
-           
-                
-               
               </div>
+
+              
 
               <br>
               <br>
@@ -231,6 +257,7 @@
                       <li><a href="monitor.html">Monitor</a></li>
                       <li><a href="shop.html">Shop</a></li>
                       <li><a href="about.html">About</a></li>
+                      <li><a href="roadmap.html">Roadmap</a></li>
                       <li><a href="contact.html">Contact</a></li>
                       </ul>
                       <!--foote_bottom_ul_amrc ends here-->
