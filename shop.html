@@ -1,408 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-        <title>Smart Mini Farm</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<head>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <title>Smart Mini Farm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-        <script>
-            $(document).ready(function(){
-              $('.card').hover(
-              // trigger when mouse hoer
-              function(){
-                $(this).animate({
-                  marginTop: "-=1%",
-                },200);
-              },
+  <script>
+    $(document).ready(function () {
+      $('.card').hover(
+        // trigger when mouse hoer
+        function () {
+          $(this).animate({
+            marginTop: "-=1%",
+          }, 200);
+        },
 
-              //trigger when mouse out 
-              function(){
-                $(this).animate({
-                  marginTop: "0%"
-                },200);
-              }
-              );
-            });
-            </script>
-    </head>
+        //trigger when mouse out 
+        function () {
+          $(this).animate({
+            marginTop: "0%"
+          }, 200);
+        }
+      );
+    });
+  </script>
+</head>
 
-    <body>
-        
-        <!-- Menu ! Head -->
-       
-        <nav class="navbar navbar-expand-lg navbar-light be-light">
+<body>
 
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+  <!-- Menu ! Head -->
+
+  <nav class="navbar navbar-expand-lg navbar-light be-light">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-              <div class="collapse navbar-collapse" id="collapse_target">
-                  <a class="navbar-brand" href="#">
-                      <img src="img/logo.svg" width="50" height="50" class="d-inline-block align-top" alt=""></a>
-                    <span  style="font-size:25px;">SmartMiniFarm</span>
-                    
-            
-              
-              <ul class="navbar-nav ml-auto">
+    <div class="collapse navbar-collapse" id="collapse_target">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.svg" width="50" height="50" class="d-inline-block align-top" alt=""></a>
+      <span style="font-size:25px;">SmartMiniFarm</span>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-               
-                <li class="nav-item">
-                    <a class="nav-link" href="monitor.html">Monitor</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="shop.html">Shop</a>
+
+
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
         </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="roadmap.html">Roadmap</a>
-              </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
-              &nbsp;&nbsp;&nbsp;
-              <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="BtnRegister" data-toggle="modal" data-target="#RegisterModal">Register</button>
-              &nbsp;&nbsp;&nbsp;
-                  <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogin" data-toggle="modal" data-target="#LoginModal">Login</button>
-                
-            </div>
-          
-          </nav>
-        
-                  
-                
-                <!-- Close Menu-->
-      
+
+        <li class="nav-item">
+          <a class="nav-link" href="monitor.html">Monitor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      &nbsp;&nbsp;&nbsp;
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="BtnRegister" data-toggle="modal"
+        data-target="#RegisterModal">Register</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogin" data-toggle="modal" data-target="#LoginModal">Login</button>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- Close Menu-->
+
   <!-- Modal Register -->
-  <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-                      <form role="form">
-                          <h3>Register</h3>
-                        <hr class="colorgraph">
-  
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
-                            </div>
-                          </div>
-                        </div>
-  
-                        <div class="form-group">
-                          <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
-                        </div>
-                        <div class="form-group">
-                          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <hr class="colorgraph">
-                        <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are indicating that you have read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
-                        </p>
-                      </form>
-                    
+  <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <form role="form">
+            <h3>Register</h3>
+            <hr class="colorgraph">
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name"
+                    tabindex="1">
                 </div>
-          
-          <div class="modal-footer" style="
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name"
+                    tabindex="2">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name"
+                tabindex="3">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address"
+                tabindex="4">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password"
+                    tabindex="5">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg"
+                    placeholder="Confirm Password" tabindex="6">
+                </div>
+              </div>
+            </div>
+
+            <hr class="colorgraph">
+            <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are indicating that you have
+              read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+            </p>
+          </form>
+
+        </div>
+
+        <div class="modal-footer" style="
           padding-top: 0px;
-          margin-top: 0px;">         
-              <button class="btn btn-outline-success my-2 my-sm-0" type="button">Register</button>
-                  
-                </div>
-          </div>
+          margin-top: 0px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button">Register</button>
+
         </div>
       </div>
-    
-                  
-     <!-- Popup Script Register -->            
+    </div>
+  </div>
+
+
+  <!-- Popup Script Register -->
   <script>
-  $('#BtnRegister').on('shown.bs.modal', function () {
-    $('#RegisterModal').trigger('focus')
-  })
+    $('#BtnRegister').on('shown.bs.modal', function () {
+      $('#RegisterModal').trigger('focus')
+    })
   </script>
-  
-          
-                <!-- Modal Login -->
-  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-                      <form role="form">
-                          <h3>Login</h3>
-                        <hr class="colorgraph">
-                        <div class="form-group">
-                          <input type="email" name="email" id="email_login" class="form-control input-lg" placeholder="Email Address or Username" tabindex="4">
-                        </div>
-                            <div class="form-group">
-                              <input type="password" name="password" id="password_login" class="form-control input-lg" placeholder="Password" tabindex="5">                      
-                        </div>
-                        <hr class="colorgraph">
-                        <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are indicating that you have read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
-                        </p>
-                      </form>
-                    
-                </div>
-          
-          <div class="modal-footer" style="
+
+
+  <!-- Modal Login -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <form role="form">
+            <h3>Login</h3>
+            <hr class="colorgraph">
+            <div class="form-group">
+              <input type="email" name="email" id="email_login" class="form-control input-lg" placeholder="Email Address or Username"
+                tabindex="4">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password_login" class="form-control input-lg" placeholder="Password"
+                tabindex="5">
+            </div>
+            <hr class="colorgraph">
+            <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are indicating that you have
+              read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+            </p>
+          </form>
+
+        </div>
+
+        <div class="modal-footer" style="
           padding-top: 0px;
-          margin-top: 0px;">         
-              <button class="btn btn-outline-danger my-2 my-sm-0" type="button">Login</button>
-                  
-                </div>
-          </div>
+          margin-top: 0px;">
+          <button class="btn btn-outline-danger my-2 my-sm-0" type="button">Login</button>
+
         </div>
       </div>
-    
-                  
-     <!-- Popup Script -->            
+    </div>
+  </div>
+
+
+  <!-- Popup Script -->
   <script>
-  $('#BtnLogin').on('shown.bs.modal', function () {
-    $('#LoginModal').trigger('focus')
-  })
+    $('#BtnLogin').on('shown.bs.modal', function () {
+      $('#LoginModal').trigger('focus')
+    })
   </script>
 
-                <br><br>
-                <div class="container">
-                <h1 class="display-2">Shop</h1>
-                <br><br>
+  <br><br>
+  <div class="container">
+    <h1 class="display-2">Shop</h1>
+    <br><br>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div id="list-example" class="list-group">
+          <a class="list-group-item list-group-item-action" href="#list-item-1">Seed</a>
+          <a class="list-group-item list-group-item-action" href="#list-item-2">Seed2</a>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+          <h4 id="list-item-1">Seed</h4>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/y7dk5l.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
               </div>
-
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-3"> 
-                  <div id="list-example" class="list-group">
-                      <a class="list-group-item list-group-item-action" href="#list-item-1">Seed</a>
-                      <a class="list-group-item list-group-item-action" href="#list-item-2">Seed2</a>
-                    </div>
-                    </div>
-                    <div class="col-lg-9"> 
-                    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                      <h4 id="list-item-1">Seed</h4>
-                      <div class="card-deck">
-                          <div class="card">
-                            <img class="card-img-top" src="http://do.lnwfile.com/y7dk5l.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/8y/n2/bo.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <a href="#" class="btn btn-primary">View</a>
-                              </div>
-                            </div>
-                        </div>
-                        <br>
-                      <h4 id="list-item-2">Seed 2</h4>
-                      <div class="card-deck">
-                          <div class="card">
-                            <img class="card-img-top" src="http://www.mythaishop.nl/Files/2/52000/52867/ProductPhotos/MaxContent/246877605.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="https://fp.lnwfile.com/_/fp/_raw/yh/rt/j1.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/h4/1w/y0.jpg" alt="Card image cap" width="150px" height="250px">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                              <a href="#" class="btn btn-primary">View</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px" height="250px">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <a href="#" class="btn btn-primary">View</a>
-                              </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    </div>
-                  </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/8y/n2/bo.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
               </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+          <br>
+          <h4 id="list-item-2">Seed 2</h4>
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="http://www.mythaishop.nl/Files/2/52000/52867/ProductPhotos/MaxContent/246877605.jpg"
+                alt="Card image cap" width="150px" height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://fp.lnwfile.com/_/fp/_raw/yh/rt/j1.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/h4/1w/y0.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="http://do.lnwfile.com/_/do/_raw/lb/yn/22.jpg" alt="Card image cap" width="150px"
+                height="250px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
 
-              
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <br>
-              <br>
 
 
-
-                
-                <!-- Footer  -->
-                <footer class="footer">
-                    <div class="container bottom_border">
-                      <div class="row">
-                      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-                      <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-                      <!--headin5_amrc-->
-                      <p class="mb10"> Smart Mini Farm is supervised by Information Engineering students KMITL. 
-                        We are eager to grow in this team and will be happy to hear from you. 
-                        And if you are interested in the IOT or the electronics to help grow vegetables,
-                         you can see details from this site at all.</p>
-                      <p><i class="fa fa-location-arrow"></i>King Mongkut's Institute of Technology Ladkrabang  </p>
-                      <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
-                      <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
-                      
-                      
-                      </div>
-                      
-                      
-                      <div class=" col-sm-4 col-md  col-6 col">
-                      <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                      <!--headin5_amrc-->
-                      <ul class="footer_ul_amrc">
-                      <li><a href="#">Image Rectoucing</a></li>
-                      <li><a href="#">Clipping Path</a></li>
-                      <li><a href="#">Hollow Man Montage</a></li>
-                      <li><a href="#">Ebay & Amazon</a></li>
-                      <li><a href="#">Hair Masking/Clipping</a></li>
-                      <li><a href="#">Image Cropping</a></li>
-                      </ul>
-                      <!--footer_ul_amrc ends here-->
-                      </div>
-                      
-                      
-                      <div class=" col-sm-4 col-md  col-6 col">
-                      <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                      <!--headin5_amrc-->
-                      <ul class="footer_ul_amrc">
-                      <li><a href="#">Remove Background</a></li>
-                      <li><a href="#">Shadows & Mirror Reflection</a></li>
-                      <li><a href="#">Logo Design</a></li>
-                      <li><a href="#">Vectorization</a></li>
-                      <li><a href="#">Hair Masking/Clipping</a></li>
-                      <li><a href="#">Image Cropping</a></li>
-                      </ul>
-                      <!--footer_ul_amrc ends here-->
-                      </div>
-                      
-                      
-                      <div class=" col-sm-4 col-md  col-12 col">
-                      <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-                      <!--headin5_amrc ends here-->
-                      
-                      <ul class="footer_ul2_amrc">
-                      <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a><p>Smart Mini Farm is supervised by Information Engineering ...<a href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater">Read more</a></p></li>
-                      <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-                      <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-                      </ul>
-                      <!--footer_ul2_amrc ends here-->
-                      </div>
-                      </div>
-                      </div>
-                      
-                      
-                      <div class="container">
-                      <ul class="foote_bottom_ul_amrc">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="monitor.html">Monitor</a></li>
-                      <li><a href="shop.html">Shop</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="roadmap.html">Roadmap</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      </ul>
-                      <!--foote_bottom_ul_amrc ends here-->
-                      <p class="text-center">Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a></p>
-                      
-                      <ul class="social_footer_ul">
-                      <li><a href="https://www.facebook.com/Smart-Mini-Farm-316348799171138" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                      </ul>
-                      <!--social_footer_ul ends here-->
-                      </div>
-                      
-                      </footer>
-                
+  <br>
+  <br>
 
 
 
 
-    </body>
+  <!-- Footer  -->
+  <footer class="footer">
+    <div class="container bottom_border">
+      <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+          <!--headin5_amrc-->
+          <p class="mb10"> Smart Mini Farm is supervised by Information Engineering students KMITL.
+            We are eager to grow in this team and will be happy to hear from you.
+            And if you are interested in the IOT or the electronics to help grow vegetables,
+            you can see details from this site at all.</p>
+          <p><i class="fa fa-location-arrow"></i>King Mongkut's Institute of Technology Ladkrabang </p>
+          <p><i class="fa fa-phone"></i> +91-9999878398 </p>
+          <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+
+
+        </div>
+
+
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="#">Image Rectoucing</a></li>
+            <li><a href="#">Clipping Path</a></li>
+            <li><a href="#">Hollow Man Montage</a></li>
+            <li><a href="#">Ebay & Amazon</a></li>
+            <li><a href="#">Hair Masking/Clipping</a></li>
+            <li><a href="#">Image Cropping</a></li>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="#">Remove Background</a></li>
+            <li><a href="#">Shadows & Mirror Reflection</a></li>
+            <li><a href="#">Logo Design</a></li>
+            <li><a href="#">Vectorization</a></li>
+            <li><a href="#">Hair Masking/Clipping</a></li>
+            <li><a href="#">Image Cropping</a></li>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+
+        <div class=" col-sm-4 col-md  col-12 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+          <!--headin5_amrc ends here-->
+
+          <ul class="footer_ul2_amrc">
+            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
+              <p>Smart Mini Farm is supervised by Information Engineering ...<a href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater">Read
+                  more</a></p>
+            </li>
+            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
+              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
+            </li>
+            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
+              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
+            </li>
+          </ul>
+          <!--footer_ul2_amrc ends here-->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="monitor.html">Monitor</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a></p>
+
+      <ul class="social_footer_ul">
+        <li><a href="https://www.facebook.com/Smart-Mini-Farm-316348799171138" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+    </div>
+
+  </footer>
+
+
+
+
+
+</body>
 
 </html>
