@@ -105,8 +105,13 @@ function signIn() {
 
 
 function logout() {
-    firebase.auth().signOut();
-    console.log('Logout!');
+    firebase.auth().signOut().then(
+        function(result){
+            swal("Good Bye!", "Your accout is Logout!", "success");
+            console.log('Logout!');
+        }
+    )
+    
 }
 
 
