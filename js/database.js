@@ -113,6 +113,9 @@ function logout() {
         function(result){
             swal("Good Bye!", "Your accout is Logout!", "success");
             console.log('Logout!');
+            setTimeout(function () {
+                location.reload();
+            }, 1200);
         }
     )
 }
@@ -126,6 +129,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       console.log('logined user!!');
       document.getElementById("BtnLogout").style.display = "inline-block";  //open
       document.getElementById("BtnLogin").style.display = "none";    //close
+      document.getElementById("BtnRegister").style.display = "none";
     } else {
       // No user is signed in.
       console.log('No User login');
