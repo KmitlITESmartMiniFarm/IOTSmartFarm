@@ -1,0 +1,15 @@
+
+
+.lead {
+    font-style: italic;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

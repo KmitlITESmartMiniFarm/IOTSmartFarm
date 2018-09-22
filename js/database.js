@@ -122,6 +122,8 @@ function logout() {
 
 
 
+
+
 firebase.auth().onAuthStateChanged(function (user) {
 
     if (user) {
@@ -137,5 +139,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       document.getElementById("BtnLogout").style.display = "none";
     }
   });
+
+
 
 
