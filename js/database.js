@@ -1,4 +1,5 @@
 
+
 function saveData() {
 
     var firstname = document.getElementById('first_name');
@@ -55,25 +56,29 @@ function insertData(first_name, last_name, display_name, email, password, passwo
 }
 
 function signUp() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    const email_register = document.getElementById('email').value;
+    const password_register = document.getElementById('password').value;
+    const auth = firebase.auth();
+    const promise = auth.createUserWithEmailAndPassword(email_register,password_register);
 
-
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(
+    promise
+        .then(
         function (result) {
             swal("Congrats!", ", Your account is created!", "success", { button: false });
 
             setTimeout(function () {
                 location.reload();
             }, 2000);
+            firebase.auth().signOut()
         }
+        
     )
+        
         .catch(error => {
             // Handle Errors here.
             var errorMessage = error.message;
             swal("Oops...", errorMessage, "error");
         });
-
 }
 
 
@@ -103,7 +108,6 @@ function signIn() {
         });
 }
 
-
 function logout() {
     firebase.auth().signOut().then(
         function(result){
@@ -111,7 +115,23 @@ function logout() {
             console.log('Logout!');
         }
     )
-    
 }
+
+
+
+firebase.auth().onAuthStateChanged(function (user) {
+
+    if (user) {
+      // User is signed in.
+      console.log('logined user!!');
+      document.getElementById("BtnLogout").style.display = "inline-block";  //open
+      document.getElementById("BtnLogin").style.display = "none";    //close
+    } else {
+      // No user is signed in.
+      console.log('No User login');
+      document.getElementById("BtnLogin").style.display = "inline-block";
+      document.getElementById("BtnLogout").style.display = "none";
+    }
+  });
 
 
