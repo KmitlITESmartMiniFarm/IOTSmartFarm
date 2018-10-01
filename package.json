@@ -1,0 +1,19 @@
+{
+  "name": "smartminifarm",
+  "version": "1.0.0",
+  "description": "Kmitl ITE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KmitlITESmartMiniFarm/IOTSmartFarm.git"
+  },
+  "author": "KMITL ITE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KmitlITESmartMiniFarm/IOTSmartFarm/issues"
+  },
+  "homepage": "https://github.com/KmitlITESmartMiniFarm/IOTSmartFarm#readme"
+}

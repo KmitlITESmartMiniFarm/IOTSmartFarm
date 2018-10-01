@@ -175,4 +175,21 @@ Follow me on Twitter @maridlcrmn
     background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   }
 
-/*  Test Click Login */
+  
+#light-bulb2 {
+    width: 150px;
+    height: 150px;
+    background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0;
+    }
+    
+    #light-bulb {
+    /* position: absolute; */
+    width: 150px;
+    height: 150px;
+    /* top: 5%;
+    left: 40%; */
+    background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0;
+    cursor: move;
+    z-index: 800;
+    }
+    
