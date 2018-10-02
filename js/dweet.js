@@ -1,49 +1,41 @@
-   
-
-function testData(){
-  $(function() {
-    
-    
-
-    dweetio.get_latest_dweet_for("eric_photon_PV", function(err, dweet){
-  
-     
-     var dweet = dweet[0]; // Dweet is always an array of 1
-     // Temp
-    var Temp = dweet.content.tempISO;
-    
-    // Humidity 
-    var Humidity = dweet.content.humISO;
-    
-    // test
-
-    var wattage = dweet.content.wattage;
-
-    
-  
-     console.log(Temp); // The content of the dweet
-     console.log(Humidity);
-     console.log(wattage);
-     console.log(dweet.created); // The create date of the dweet
-
-      
-// Pass in a number for the percent
-  updateDonutChart('#specificChart', Temp, true);
-  updateDonutChart('#specificChart2', Humidity, true);
-  updateDonutChart('#specificChart3', wattage, true);
-    }); 
-
-  
-    
-   
-    setInterval(testData,20000)
-       
-
-  });
-
+function stop_listen(){
+    dweetio.stop_listening();
+    console.log('Stop Complete');
 }
 
-testData();
+
+function listen_data(){
+    dweetio.listen_for("eric_photon_PV", function(dweet){
+       get_lastes();
+    });
+    
+}
+
+    
+function get_lastes(){
+    dweetio.get_latest_dweet_for("eric_photon_PV", function(err, dweet){
+
+        var dweet = dweet[0]; // Dweet is always an array of 1
+        // Temp
+       var Temp = dweet.content.tempISO;
+       // Humidity 
+       var Humidity = dweet.content.humISO;
+       var wattage = dweet.content.wattage;
+   
+        console.log(Temp); // The content of the dweet
+        console.log(Humidity);
+        console.log(wattage);
+        console.log(dweet.created); // The create date of the dweet
+
+        updateDonutChart('#specificChart', Temp, true);
+        updateDonutChart('#specificChart2', Humidity, true);
+        updateDonutChart('#specificChart3', wattage, true);
+        
+    });
+}
+
+
+
 
 /**
  * Updates the donut chart's percent number and the CSS positioning of the progress bar.

@@ -86,4 +86,13 @@
   border-radius: 50%;
 }
 
+
+/* When Click*/
+
+.btn-success {
+  color: #ffffff; 
+  background-color: #161617; 
+  border-color: #494F57;
+}
+
 /*# sourceMappingURL=style.css.map */
