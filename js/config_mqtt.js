@@ -42,6 +42,7 @@
  // called when a message arrives
  function onMessageArrived(message) {
    console.log("onMessageArrived:"+message.payloadString);
+   console.log("Topic:"+message.destinationName);
  }
  function led_on(){
    send("on");
