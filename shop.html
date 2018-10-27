@@ -256,6 +256,24 @@
     </div>
   </div>
 
+  <!-- Test Enter -->
+  <script>
+      var email_login = document.getElementById("email_login");
+      var password_login = document.getElementById("password_login");
+      email_login.addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if(event.keyCode === 13) {
+             document.getElementById("loginLoading").click();
+          }
+      });
+      password_login.addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if(event.keyCode === 13) {
+            document.getElementById("loginLoading").click();
+          }
+      });
+      </script>
+
   <!-- Loading Register.. -->
   <script>
     $(document).ready(function () {
