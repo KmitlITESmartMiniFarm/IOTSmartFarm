@@ -20,19 +20,23 @@ client.connect(options);
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
+
   client.subscribe("/server");
   client.subscribe("smartfarm/temperature");
   client.subscribe("smartfarm/humidity");
+  client.subscribe("smartfarm/humidity_soid")
+
   message = new Paho.MQTT.Message("off");
   message.destinationName = "/server";
   client.send(message);
 
   swal("Connect OK", "MQTT Connection !", "success");
+  
 }
 
 function doFail(e) {
   console.log(e);
-  swal("Error", "MQTT Failed !", "error");
+  alert('Fail Connect MQTT');
 }
 
 // called when the client loses its connection
@@ -49,27 +53,25 @@ var result = [];
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:" + message.destinationName + ' ' + message.payloadString);
+
+
   if (message.destinationName == "smartfarm/temperature") {
     var Temp = JSON.parse(message.payloadString);
     updateDonutChart('#specificChart', Temp, true);
     result.push(Temp);
-
-    var d = new Date();
-    console.log(d);
-
-    
-
-
-
-
-
   }
 
+  if (message.destinationName == "smartfarm/humidity_soid") {
+    var Humidity_soid = JSON.parse(message.payloadString);
+    updateDonutChart('#specificChart3', Humidity_soid, true);
+    result.push(Humidity_soid);
+  }
 
   if (message.destinationName == "smartfarm/humidity") {
     var Humidity = JSON.parse(message.payloadString);
     updateDonutChart('#specificChart2', Humidity, true);
     result.push(Humidity);
+
     //Canvas
     var options = {
       animationEnabled: true,
@@ -97,6 +99,8 @@ function onMessageArrived(message) {
 
   }
   
+
+
 
 }
 function led_on() {
