@@ -99,10 +99,9 @@ function onMessageArrived(message) {
 
   }
   
-
-
-
 }
+
+
 function led_on() {
   send("on");
   $('#light-bulb2').css({ 'opacity': '1' });

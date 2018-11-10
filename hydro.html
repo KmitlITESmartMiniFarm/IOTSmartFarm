@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Smart Mini Farm</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <!-- Test Spiner Loading -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -31,699 +53,994 @@
     <script src="js/config_firebase.js"></script>
     <script src="js/database.js"></script>
 
-    <link rel="stylesheet" href="contentsHO.css">
-    <!-- Auth website Block! no signin-->
+    <link rel="stylesheet" href="contentsHO.css" />
+    <!-- Auth website Block! no signin -->
     <script src="js/testweb.js"></script>
-</head>
 
-<body>
+    <!-- Jquery Script -->
+    <script src="js/click_jquery.js"></script>
+  </head>
 
-
+  <body>
     <!-- Menu Head -->
 
     <nav class="navbar navbar-expand-lg navbar-light be-light">
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#collapse_target"
+        aria-controls="collapse_target"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/logo.svg"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+            alt=""
+        /></a>
 
-        <div class="collapse navbar-collapse" id="collapse_target">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.svg" width="50" height="50" class="d-inline-block align-top" alt=""></a>
-            <span style="font-size:25px;">SmartMiniFarm</span>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
+        <span style="font-size:25px;">SmartMiniFarm</span>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="monitor.html">Monitor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shop.html">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="roadmap.html">Roadmap</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                &nbsp;&nbsp;&nbsp;
-                <li class="nav-item">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="BtnRegister" data-toggle="modal"
-                        data-target="#RegisterModal">Register</button>
-                </li>
-                &nbsp;&nbsp;&nbsp;
-                <li class="nav-item">
-                    <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogin" data-toggle="modal"
-                        data-target="#LoginModal">Login</button>
-                </li>
-                <li class="nav-item">
-                    <button onclick="logout()" class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogout"
-                        style="display: none">Logout</button>
-                </li>
-            </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="monitor.html">Monitor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="roadmap.html">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+              id="BtnRegister"
+              data-toggle="modal"
+              data-target="#RegisterModal"
+            >
+              Register
+            </button>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+            <button
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+              id="BtnLogin"
+              data-toggle="modal"
+              data-target="#LoginModal"
+            >
+              Login
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              onclick="logout()"
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+              id="BtnLogout"
+              style="display: none"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <!-- Close Menu-->
+    <!-- Close Menu -->
 
-    <br><br>
+    <br /><br />
     <div class="container">
-        <h1 class="display-2">Learning to Hydroponics</h1>
-        <p class="lead">Let's Learning to Grow Tree</p>
-        <br><br>
+      <h1 class="display-2">Learning to Hydroponics</h1>
+      <p class="lead">Let's Learning to Grow Tree</p>
+      <br /><br />
     </div>
 
     <!-- Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/Hydro1.jpg" alt="Card image cap" width="100px" height="180px">
-                    <div class="card-body">
-                        <h5 class="card-title">Lesson 1</h5>
-                        <p class="card-text">You are Learning to Simple How to Grow Tree Hydroponics</p>
-                        <a id="hydro1click" href="#hydro1" class="btn btn-primary">Go Aways.</a>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/Hydro1.jpg"
+              alt="Card image cap"
+              width="100px"
+              height="180px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Lesson 1</h5>
+              <p class="card-text">
+                You are Learning to Simple How to Grow Tree Hydroponics
+              </p>
+              <a id="hydro1click" href="#hydro1" class="btn btn-primary"
+                >Go Aways.</a
+              >
             </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/Hydro2.jpg" alt="Card image cap" width="100px" height="180px">
-                    <div class="card-body">
-                        <h5 class="card-title">Lesson 2</h5>
-                        <p class="card-text">You are Learning to Type of Tree of Hydroponics.</p>
-                        <a id="hydro2click" href="#hydro2" class="btn btn-primary">Go Aways</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/Hydro3.jpg" alt="Card image cap" width="100px" height="180px">
-                    <div class="card-body">
-                        <h5 class="card-title">Lesson 3</h5>
-                        <p class="card-text">You are Learning to Smart Mini Farm Project. </p>
-                        <a id="hydro3click" href="#hydro3" class="btn btn-primary">Go Aways</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/Hydro2.jpg"
+              alt="Card image cap"
+              width="100px"
+              height="180px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Lesson 2</h5>
+              <p class="card-text">
+                You are Learning to Type of Tree of Hydroponics.
+              </p>
+              <a id="hydro2click" href="#hydro2" class="btn btn-primary"
+                >Go Aways</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/Hydro3.jpg"
+              alt="Card image cap"
+              width="100px"
+              height="180px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Lesson 3</h5>
+              <p class="card-text">
+                You are Learning to Smart Mini Farm Project.
+              </p>
+              <a id="hydro3click" href="#hydro3" class="btn btn-primary"
+                >Go Aways</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <br><br>
+    <br /><br />
 
     <!-- When click Hydro1 !! -->
     <script type="text/javascript">
-        $('a#hydro1click').click(function () {
-            document.getElementById("hydro1").style.display = "block";
-            document.getElementById("hydro2").style.display = "none";
-            document.getElementById("hydro3").style.display = "none";
-        });
+      $("a#hydro1click").click(function() {
+        document.getElementById("hydro1").style.display = "block";
+        document.getElementById("hydro2").style.display = "none";
+        document.getElementById("hydro3").style.display = "none";
+      });
     </script>
 
     <!-- When click Hydro2 !! -->
     <script type="text/javascript">
-        $('a#hydro2click').click(function () {
-            document.getElementById("hydro1").style.display = "none";
-            document.getElementById("hydro2").style.display = "block";
-            document.getElementById("hydro3").style.display = "none";
-        });
+      $("a#hydro2click").click(function() {
+        document.getElementById("hydro1").style.display = "none";
+        document.getElementById("hydro2").style.display = "block";
+        document.getElementById("hydro3").style.display = "none";
+      });
     </script>
 
     <!-- When click Hydro3 !! -->
     <script type="text/javascript">
-        $('a#hydro3click').click(function () {
-            document.getElementById("hydro1").style.display = "none";
-            document.getElementById("hydro2").style.display = "none";
-            document.getElementById("hydro3").style.display = "block";
-        });
+      $("a#hydro3click").click(function() {
+        document.getElementById("hydro1").style.display = "none";
+        document.getElementById("hydro2").style.display = "none";
+        document.getElementById("hydro3").style.display = "block";
+      });
     </script>
-
-
-
-
-    
-
-
-
 
     <!-- Content Hydro1 -->
 
-    
+    <div class="container" id="hydro1" style="display:none">
+      <hr class="colorgraph" />
+      <br /><br />
+      <br />
+      <div class="row">
+        <div class="hidden-xs col-lg-3">
+          <div
+            class="fading-side-menu"
+            data-spy="affix"
+            data-offset-top="350"
+            style="font-size: 20px;"
+          >
+            <h4 style="font-family:inherit;">Table of Contents</h4>
+            <br />
+            <hr class="no-margin" />
+            <ul class="list-unstyled">
+              <li>
+                <a href="#intro">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Introduction
+                </a>
+              </li>
 
-            
-            <div class="container" id="hydro1" style="display:none">
-                    <hr class="colorgraph">
-                    <br><br>
-               <br>
-                <div class="row">
-                    <div class="hidden-xs col-lg-3">
-                        <div class="fading-side-menu" data-spy="affix" data-offset-top="350" style="font-size: 20px;">
-                            <h4 style="font-family:inherit;">Table of Contents</h4>
-                            <br>
-                            <hr class="no-margin">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#intro">
-                                        <span class="fa fa-angle-double-right text-primary"></span>Introduction
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="#getting-started">
-                                        <span class="fa fa-angle-double-right text-primary"></span>Getting started
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="#Benefits-of-Hydroponics">
-                                        <span class="fa fa-angle-double-right text-primary"></span>Benefits of Hydroponics
-                                    </a>
-                                </li>
-                              
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
-                    <div class="col-xs-12 col-sm-9">
-                        <p class="small text-muted">Published Septemper 27, 2018 by KMITL SmartMiniFarm</p>
-                        <h3 id="intro" class="title">Hydroponics</h3>
-                        <p class="lead">Lets Focus on Content</p>
-        
-                        <p> &nbsp;&nbsp;&nbsp;Hydroponics (Hydroponics) is a plant that does not use soil, but uses water that contains plant nutrients to dissolve or to grow plants in nutrient solution. This is a new way to grow plants. Especially vegetables and plants used as food. Because space saving And not 
-                            contaminated with chemicals in the soil to get clean vegetables. 
-                            Nowadays, in many soil-free cropping techniques.</p>
-        
-                        <h4 id="getting-started">Getting started</h4>
-                        <p> &nbsp;&nbsp;&nbsp;Hydroponic plants have a variety of innovative techniques. It is not limited to water culture only. In some cases substrate is replaced with all soil and watered with nutrient solution. We often call it subterranean culture or media culture or aggregate hydroponics. It is noteworthy that the technique of growing plants in water or other
-                             hydroponics is sometimes good. Include soilless culture instead of hydroponics.</p>
-        
-                        <h4 id="Benefits-of-Hydroponics">Benefits of Hydroponics</h4>
-                        <ul>1.The strength of this vegetable is that it produces a cleaner crop than the soil. Safe from toxic residues. The vegetables are beautiful to eat. Vegetables taste good. 
-                            Highly nutritious And the vegetables are softer and crisper than the vegetables grown in the soil..</ul>
-                        <ul>2.Hydro-kennel cultivation does not require soil to grow. Can be grown anywhere. Planted both small and large plants. It's a great way for those with little space (such as those who live in an apartment) and no boundaries, whether small in size for household consumption or large business areas. For this reason, 
-                            this method is very popular in very heavily populated cities such as Taiwan, Japan, the Netherlands.</ul>
-                        <ul>3.It helps to create an environment in which we can control ourselves 
-                            more for the growth of plants. Because we can eliminate many of the unknown variables from the experiments, a lot of them are compared to growing vegetables.</ul>
-        
-                        <ul>4.This type of vegetables can be used with many plants. (Depending on the difficulty of planting), such as fruits, vegetables, ornamental plants, as well as perennials. But in business production. It is popular for growing vegetables and fruits. It is a short-lived crop.</ul>
-                        <ul>5.Vegetable growth and yield faster than planting vegetables in the soil at least 1-2 weeks.</ul>
-                        <ul>6.The yield is higher and more uniform than that of normal soil. It can manage and control the environment to be suitable for the plant. It can produce crops throughout the year. It can increase the production cycle is very short and high quality.</ul>
-        
-                        <ul>7.The hydroponics system saves more than 10 times less than regular vegetable crops so it can be grown in the dry season or in the off-season. It also offers higher returns..</ul>
-                        <ul>8.This type of vegetation is more consistent in watering than in normal soil crops. It also controls the water supply according to the needs of the plant.</ul>
-                                                                                              
-                    </div>
-                </div>
-            </div> <br><br>
+              <li>
+                <a href="#getting-started">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Getting started
+                </a>
+              </li>
 
-           
+              <li>
+                <a href="#Benefits-of-Hydroponics">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Benefits of Hydroponics
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
+        <div class="col-xs-12 col-sm-9">
+          <p class="small text-muted">
+            Published Septemper 27, 2018 by KMITL SmartMiniFarm
+          </p>
+          <h3 id="intro" class="title">Hydroponics</h3>
+          <p class="lead">Lets Focus on Content</p>
+
+          <p>
+            &nbsp;&nbsp;&nbsp;Hydroponics (Hydroponics) is a plant that does not
+            use soil, but uses water that contains plant nutrients to dissolve
+            or to grow plants in nutrient solution. This is a new way to grow
+            plants. Especially vegetables and plants used as food. Because space
+            saving And not contaminated with chemicals in the soil to get clean
+            vegetables. Nowadays, in many soil-free cropping techniques.
+          </p>
+
+          <h4 id="getting-started">Getting started</h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;Hydroponic plants have a variety of innovative
+            techniques. It is not limited to water culture only. In some cases
+            substrate is replaced with all soil and watered with nutrient
+            solution. We often call it subterranean culture or media culture or
+            aggregate hydroponics. It is noteworthy that the technique of
+            growing plants in water or other hydroponics is sometimes good.
+            Include soilless culture instead of hydroponics.
+          </p>
+
+          <h4 id="Benefits-of-Hydroponics">Benefits of Hydroponics</h4>
+          <ul>
+            1.The strength of this vegetable is that it produces a cleaner crop
+            than the soil. Safe from toxic residues. The vegetables are
+            beautiful to eat. Vegetables taste good. Highly nutritious And the
+            vegetables are softer and crisper than the vegetables grown in the
+            soil..
+          </ul>
+          <ul>
+            2.Hydro-kennel cultivation does not require soil to grow. Can be
+            grown anywhere. Planted both small and large plants. It's a great
+            way for those with little space (such as those who live in an
+            apartment) and no boundaries, whether small in size for household
+            consumption or large business areas. For this reason, this method is
+            very popular in very heavily populated cities such as Taiwan, Japan,
+            the Netherlands.
+          </ul>
+          <ul>
+            3.It helps to create an environment in which we can control
+            ourselves more for the growth of plants. Because we can eliminate
+            many of the unknown variables from the experiments, a lot of them
+            are compared to growing vegetables.
+          </ul>
+
+          <ul>
+            4.This type of vegetables can be used with many plants. (Depending
+            on the difficulty of planting), such as fruits, vegetables,
+            ornamental plants, as well as perennials. But in business
+            production. It is popular for growing vegetables and fruits. It is a
+            short-lived crop.
+          </ul>
+          <ul>
+            5.Vegetable growth and yield faster than planting vegetables in the
+            soil at least 1-2 weeks.
+          </ul>
+          <ul>
+            6.The yield is higher and more uniform than that of normal soil. It
+            can manage and control the environment to be suitable for the plant.
+            It can produce crops throughout the year. It can increase the
+            production cycle is very short and high quality.
+          </ul>
+
+          <ul>
+            7.The hydroponics system saves more than 10 times less than regular
+            vegetable crops so it can be grown in the dry season or in the
+            off-season. It also offers higher returns..
+          </ul>
+          <ul>
+            8.This type of vegetation is more consistent in watering than in
+            normal soil crops. It also controls the water supply according to
+            the needs of the plant.
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br /><br />
 
     <!-- Content Hydro2 -->
 
     <div class="container" id="hydro2" style="display:none">
-            <hr class="colorgraph">
-            <br>
-            <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control ml-auto" type="search" placeholder="Search" aria-label="Search">
-                    &nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+      <hr class="colorgraph" />
+      <br />
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control ml-auto"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
 
-            <br><br>
-            <div class="row">
-                    <div class="card-deck">
-                            
-                            <div class="card">
-                              <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                height="190px">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <a href="#" class="btn btn-primary">View</a>
-                              </div>
-                            </div>
-                            <div class="card">
-                                    <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                      height="190px">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                      <a href="#" class="btn btn-primary">View</a>
-                                    </div>
-                            </div>
-                            <div class="card">
-                                    <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                      height="190px">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                      <a href="#" class="btn btn-primary">View</a>
-                                    </div>
-                            </div>    
-                          </div>
-                          <br><br>
-                      
-                          <div class="card-deck">
-                                <div class="card">
-                                  <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                    height="190px">
-                                  <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <a href="#" class="btn btn-primary">View</a>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                        <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                          height="190px">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                          <a href="#" class="btn btn-primary">View</a>
-                                        </div>
-                                </div>
-                                <div class="card">
-                                        <img class="card-img-top" src="img/coslettuce.jpg" alt="Card image cap" width="190px"
-                                          height="190px">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                          <a href="#" class="btn btn-primary">View</a>
-                                        </div>
-                                </div>    
-                              </div>
-                              <br><br>
+      <br /><br />
+      <div class="row">
+        <div class="card-deck">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
             </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
             </div>
-
-    <!-- Content Hydro3-->
-    <div class="container" id="hydro3" style="display:none">
-            <hr class="colorgraph">
-            <br>
-        <br>
-        <div class="row">
-            <div class="hidden-xs col-lg-3">
-                <div class="fading-side-menu" data-spy="affix" data-offset-top="350"style="font-size: 20px;">
-                        <h4 style="font-family:inherit;">Table of Contents</h4>
-                    <hr class="no-margin">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#intro">
-                                <span class="fa fa-angle-double-right text-primary"></span>Introduction Hydro3
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#getting-started">
-                                <span class="fa fa-angle-double-right text-primary"></span>Getting started
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#setting-up-our-page">
-                                <span class="fa fa-angle-double-right text-primary"></span>Setting up our page
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#conclusion">
-                                <span class="fa fa-angle-double-right text-primary"></span>Conclusion
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
             </div>
-            <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
-            <div class="col-xs-12 col-sm-9">
-                <p class="small text-muted">Published May 19, 2015 by Mouse0270</p>
-                <h3 id="intro" class="title">Hydro3</h3>
-                <p class="lead">Lets Focus on Content</p>
-
-                <p>I was browsing the web when I came across a tutorial on <a href="http://www.html5rocks.com/" target="_blank">HTML5
-                        Rocks</a> and realized they have one of the coolest effect and subtle effects I have never seen
-                    before on any other blog/tutorial site. It is so simple and elegant I couldn't wait to try and
-                    replicate it. I would like to point out I did replicate it <strong>NOT</strong> it. I never even
-                    looked at the source code nor do I know how they actually accomplished their version of this. I do
-                    however give them full credit for not only the inspiration but the design. It is a really amazing
-                    and simple effect.</p>
-                <p>Alright, so what does this actually do. While if you notice to the left (if you are viewing this on
-                    <em>xs</em> device it will not show) we have a side menu that looks pretty ordinary. It will use <a
-                        href="http://getbootstrap.com/" target="_blank">Bootstrap's'</a> affix plugin to stick itself
-                    to the top of the screen as you scroll down. After the side menu has gotten the class <code>affix</code>
-                    from bootstrap it will slowly start to fade out until you can barely see it. If you Hover over it
-                    or back to the top, you will notice it will quickly fade back into view. This very simple and small
-                    effect, helps users focus on the content of the blog, while still having an unobtrusive side menu.</p>
-
-                <h4 id="getting-started">Getting started</h4>
-                <p>Jane Jacobs, social good, education, dialogue emergent; freedom incubation theory of social change
-                    beneficiaries. Democratizing the global financial system accelerate progress accessibility, raise
-                    awareness agriculture compassion protect asylum assistance hack advancement save the world
-                    human-centered design. Meaningful work storytelling human rights nonviolent resistance fellows.
-                    Support economic security thinkers who make change happen process provide disrupt inclusive.
-                    Prevention, synthesize committed; recognition; policy Millennium Development Goals working
-                    alongside life-expectancy. Generosity solve; affiliate, combat malaria; disruptor urban; prosperity
-                    activism new approaches.</p>
-                <p>Frontline save lives empowerment; human potential innovate. Treatment indicator civic engagement
-                    rights-based approach nutrition combat poverty social health shifting landscape. Enabler giving
-                    advocate peace micro-finance. Challenges collaborative safeguards visionary board of directors Kony
-                    2012 Andrew Carnegie. Respect amplify implementation; public institutions many voices honor
-                    measures courageous. Engage, gender rights maximize empower local solutions, recognize potential;
-                    safety challenges of our times fight against oppression transform socio-economic divide. Medical
-                    supplies, Nelson Mandela technology nonprofit; legitimize; policymakers innovation Rosa Parks shift
-                    global health Bloomberg readiness making progress Aga Khan.</p>
-                <p>Reduce child mortality global leaders resolve refugee mobilize; participatory monitoring, worldwide,
-                    connect forward-thinking sharing economy detection partnership. Harness capacity building immunize
-                    social entrepreneurship celebrate assessment expert development crisis management. Liberal
-                    long-term non-partisan, change-makers best practices; small-scale farmers proper resources
-                    affordable health care women and children change lives donors inclusive capitalism Jane Addams.
-                    Cross-agency coordination country solution change movements political vulnerable citizens
-                    cornerstone Angelina Jolie revitalize.</p>
-
-                <h4 id="setting-up-our-page">Setting up our page</h4>
-                <p>Metrics enabler end hunger, economic independence empower celebrate social analysis incubation board
-                    of directors equity. Effectiveness; carbon rights; urban; liberal maintain Bloomberg developing
-                    livelihoods; research, revitalize improving quality agenda clean water harness. Aga Khan; relief
-                    efficient social responsibility, international development, aid diversity crisis situation public
-                    service.</p>
-                <p>Informal economies meaningful work, expanding community ownership social impact global leaders.
-                    Reduce carbon emissions fluctuation countries lasting change elevate. Leverage, amplify
-                    public-private partnerships, John Lennon minority. Local; world problem solving fight against
-                    malnutrition, meaningful, advocate solve emergency response generosity, microloans benefit turmoil
-                    Millennium Development Goals promising development development. Enable overcome injustice, social
-                    entrepreneurship poverty Gandhi donors. Challenges interconnectivity respect integrity, sustainable
-                    safety transform cross-cultural think tank medical civic engagement time of extraordinary change
-                    significant.</p>
-
-                <h4 id="conclusion">Conclusion</h4>
-                <p>Tackling policy dialogue conflict resolution design thinking community shift Jane Addams impact
-                    legal aid compassion. United Nations democracy non-partisan institutions prevention. Beneficiaries,
-                    incubation vulnerable citizens; cause many voices connect; grantees Cesar Chavez empowerment
-                    partnership change lives. Citizens of change global citizens social worker; inspire social change,
-                    public service social responsibility refugee safeguards climate change accessibility Ford
-                    Foundation save the world lasting change The Elders. Nonviolent resistance save lives cooperation
-                    fluctuation change movements policymakers transform the world. Revitalize implementation frontline
-                    growth women's rights future; international development, mobilize metrics fundraising campaign.</p>
-                <p>John Lennon citizenry accelerate solve, humanitarian carbon emissions reductions, assistance
-                    dialogue volunteer; marginalized communities enabler meaningful prosperity. Country; dedicated
-                    leverage, transformative social innovation small-scale farmers reduce carbon emissions open source
-                    freedom economic security developing nations protect. Global network forward-thinking poverty
-                    nonprofit environmental voice. Deep engagement resourceful activist opportunity; equal opportunity
-                    focus on impact care political foundation. Women and children countries honesty investment gender
-                    equality.</p>
-                <p>Social entrepreneurship progress tackle invest social impact, inspire breakthroughs advancement
-                    scalable health. Micro-finance Andrew Carnegie sustainable future human experience campaign global
-                    justice world problem solving sharing economy Kony 2012 new approaches results challenges of our
-                    times. Innovate integrity, indicator; Nelson Mandela, emergent free expression enable
-                    life-expectancy expanding community ownership human potential. Microloans Jane Jacobs, eradicate
-                    cross-agency coordination think tank significant. Outcomes thinkers who make change happen
-                    catalytic effect empower global health working alongside pride medical supplies.</p>
-            </div>
+          </div>
         </div>
+        <br /><br />
+
+        <div class="card-deck">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="img/coslettuce.jpg"
+              alt="Card image cap"
+              width="190px"
+              height="190px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+      </div>
     </div>
 
+    <!-- Content Hydro3 -->
+    <div class="container" id="hydro3" style="display:none">
+      <hr class="colorgraph" />
+      <br />
+      <br />
+      <div class="row">
+        <div class="hidden-xs col-lg-3">
+          <div
+            class="fading-side-menu"
+            data-spy="affix"
+            data-offset-top="350"
+            style="font-size: 20px;"
+          >
+            <h4 style="font-family:inherit;">Table of Contents</h4>
+            <hr class="no-margin" />
+            <ul class="list-unstyled">
+              <li>
+                <a href="#intro">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Introduction Hydro3
+                </a>
+              </li>
+              <li>
+                <a href="#getting-started">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Getting started
+                </a>
+              </li>
+              <li>
+                <a href="#setting-up-our-page">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Setting up our page
+                </a>
+              </li>
+              <li>
+                <a href="#conclusion">
+                  <span class="fa fa-angle-double-right text-primary"></span
+                  >Conclusion
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
+        <div class="col-xs-12 col-sm-9">
+          <p class="small text-muted">Published May 19, 2015 by Mouse0270</p>
+          <h3 id="intro" class="title">Hydro3</h3>
+          <p class="lead">Lets Focus on Content</p>
+
+          <p>
+            I was browsing the web when I came across a tutorial on
+            <a href="http://www.html5rocks.com/" target="_blank">HTML5 Rocks</a>
+            and realized they have one of the coolest effect and subtle effects
+            I have never seen before on any other blog/tutorial site. It is so
+            simple and elegant I couldn't wait to try and replicate it. I would
+            like to point out I did replicate it <strong>NOT</strong> it. I
+            never even looked at the source code nor do I know how they actually
+            accomplished their version of this. I do however give them full
+            credit for not only the inspiration but the design. It is a really
+            amazing and simple effect.
+          </p>
+          <p>
+            Alright, so what does this actually do. While if you notice to the
+            left (if you are viewing this on <em>xs</em> device it will not
+            show) we have a side menu that looks pretty ordinary. It will use
+            <a href="http://getbootstrap.com/" target="_blank">Bootstrap's'</a>
+            affix plugin to stick itself to the top of the screen as you scroll
+            down. After the side menu has gotten the class
+            <code>affix</code> from bootstrap it will slowly start to fade out
+            until you can barely see it. If you Hover over it or back to the
+            top, you will notice it will quickly fade back into view. This very
+            simple and small effect, helps users focus on the content of the
+            blog, while still having an unobtrusive side menu.
+          </p>
+
+          <h4 id="getting-started">Getting started</h4>
+          <p>
+            Jane Jacobs, social good, education, dialogue emergent; freedom
+            incubation theory of social change beneficiaries. Democratizing the
+            global financial system accelerate progress accessibility, raise
+            awareness agriculture compassion protect asylum assistance hack
+            advancement save the world human-centered design. Meaningful work
+            storytelling human rights nonviolent resistance fellows. Support
+            economic security thinkers who make change happen process provide
+            disrupt inclusive. Prevention, synthesize committed; recognition;
+            policy Millennium Development Goals working alongside
+            life-expectancy. Generosity solve; affiliate, combat malaria;
+            disruptor urban; prosperity activism new approaches.
+          </p>
+          <p>
+            Frontline save lives empowerment; human potential innovate.
+            Treatment indicator civic engagement rights-based approach nutrition
+            combat poverty social health shifting landscape. Enabler giving
+            advocate peace micro-finance. Challenges collaborative safeguards
+            visionary board of directors Kony 2012 Andrew Carnegie. Respect
+            amplify implementation; public institutions many voices honor
+            measures courageous. Engage, gender rights maximize empower local
+            solutions, recognize potential; safety challenges of our times fight
+            against oppression transform socio-economic divide. Medical
+            supplies, Nelson Mandela technology nonprofit; legitimize;
+            policymakers innovation Rosa Parks shift global health Bloomberg
+            readiness making progress Aga Khan.
+          </p>
+          <p>
+            Reduce child mortality global leaders resolve refugee mobilize;
+            participatory monitoring, worldwide, connect forward-thinking
+            sharing economy detection partnership. Harness capacity building
+            immunize social entrepreneurship celebrate assessment expert
+            development crisis management. Liberal long-term non-partisan,
+            change-makers best practices; small-scale farmers proper resources
+            affordable health care women and children change lives donors
+            inclusive capitalism Jane Addams. Cross-agency coordination country
+            solution change movements political vulnerable citizens cornerstone
+            Angelina Jolie revitalize.
+          </p>
+
+          <h4 id="setting-up-our-page">Setting up our page</h4>
+          <p>
+            Metrics enabler end hunger, economic independence empower celebrate
+            social analysis incubation board of directors equity. Effectiveness;
+            carbon rights; urban; liberal maintain Bloomberg developing
+            livelihoods; research, revitalize improving quality agenda clean
+            water harness. Aga Khan; relief efficient social responsibility,
+            international development, aid diversity crisis situation public
+            service.
+          </p>
+          <p>
+            Informal economies meaningful work, expanding community ownership
+            social impact global leaders. Reduce carbon emissions fluctuation
+            countries lasting change elevate. Leverage, amplify public-private
+            partnerships, John Lennon minority. Local; world problem solving
+            fight against malnutrition, meaningful, advocate solve emergency
+            response generosity, microloans benefit turmoil Millennium
+            Development Goals promising development development. Enable overcome
+            injustice, social entrepreneurship poverty Gandhi donors. Challenges
+            interconnectivity respect integrity, sustainable safety transform
+            cross-cultural think tank medical civic engagement time of
+            extraordinary change significant.
+          </p>
+
+          <h4 id="conclusion">Conclusion</h4>
+          <p>
+            Tackling policy dialogue conflict resolution design thinking
+            community shift Jane Addams impact legal aid compassion. United
+            Nations democracy non-partisan institutions prevention.
+            Beneficiaries, incubation vulnerable citizens; cause many voices
+            connect; grantees Cesar Chavez empowerment partnership change lives.
+            Citizens of change global citizens social worker; inspire social
+            change, public service social responsibility refugee safeguards
+            climate change accessibility Ford Foundation save the world lasting
+            change The Elders. Nonviolent resistance save lives cooperation
+            fluctuation change movements policymakers transform the world.
+            Revitalize implementation frontline growth women's rights future;
+            international development, mobilize metrics fundraising campaign.
+          </p>
+          <p>
+            John Lennon citizenry accelerate solve, humanitarian carbon
+            emissions reductions, assistance dialogue volunteer; marginalized
+            communities enabler meaningful prosperity. Country; dedicated
+            leverage, transformative social innovation small-scale farmers
+            reduce carbon emissions open source freedom economic security
+            developing nations protect. Global network forward-thinking poverty
+            nonprofit environmental voice. Deep engagement resourceful activist
+            opportunity; equal opportunity focus on impact care political
+            foundation. Women and children countries honesty investment gender
+            equality.
+          </p>
+          <p>
+            Social entrepreneurship progress tackle invest social impact,
+            inspire breakthroughs advancement scalable health. Micro-finance
+            Andrew Carnegie sustainable future human experience campaign global
+            justice world problem solving sharing economy Kony 2012 new
+            approaches results challenges of our times. Innovate integrity,
+            indicator; Nelson Mandela, emergent free expression enable
+            life-expectancy expanding community ownership human potential.
+            Microloans Jane Jacobs, eradicate cross-agency coordination think
+            tank significant. Outcomes thinkers who make change happen catalytic
+            effect empower global health working alongside pride medical
+            supplies.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- Button trigger modal -->
 
     <!-- Modal Register -->
-    <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <div
+      class="modal fade"
+      id="RegisterModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form_register" role="form">
+              <h3>Register</h3>
+              <hr class="colorgraph" />
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="first_name"
+                      id="first_name"
+                      class="form-control input-lg"
+                      placeholder="First Name"
+                      tabindex="1"
+                      required
+                    />
+                  </div>
                 </div>
-                <div class="modal-body">
-
-                    <form id="form_register" role="form">
-                        <h3>Register</h3>
-                        <hr class="colorgraph">
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="first_name" id="first_name" class="form-control input-lg"
-                                        placeholder="First Name" tabindex="1" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="last_name" id="last_name" class="form-control input-lg"
-                                        placeholder="Last Name" tabindex="2" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="display_name" id="display_name" class="form-control input-lg"
-                                placeholder="Display Name" tabindex="3" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-lg" aria-describedby="emailHelp"
-                                placeholder="Email Address" tabindex="4">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-lg"
-                                        aria-describedby="passwordHelpBlock" placeholder="Password" tabindex="5">
-                                    <small id="passwordHelpBlock" class="form-text text-muted">
-                                        Your password must be 8 characters.
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="password_confirmation" id="password_confirmation"
-                                        class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr class="colorgraph">
-                        <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are indicating
-                            that you have
-                            read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a
-                                href="#">Privacy Policy</a>.
-                        </p>
-                    </form>
-
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="last_name"
+                      class="form-control input-lg"
+                      placeholder="Last Name"
+                      tabindex="2"
+                      required
+                    />
+                  </div>
                 </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="display_name"
+                  id="display_name"
+                  class="form-control input-lg"
+                  placeholder="Display Name"
+                  tabindex="3"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control input-lg"
+                  aria-describedby="emailHelp"
+                  placeholder="Email Address"
+                  tabindex="4"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control input-lg"
+                      aria-describedby="passwordHelpBlock"
+                      placeholder="Password"
+                      tabindex="5"
+                    />
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      Your password must be 8 characters.
+                    </small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password_confirmation"
+                      id="password_confirmation"
+                      class="form-control input-lg"
+                      placeholder="Confirm Password"
+                      tabindex="6"
+                    />
+                  </div>
+                </div>
+              </div>
 
-                <div class="modal-footer" style="
+              <hr class="colorgraph" />
+              <p class="small mt-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are
+                indicating that you have read and agree to the
+                <a href="#" class="ps-hero__content__link">Terms of Use</a> and
+                <a href="#">Privacy Policy</a>.
+              </p>
+            </form>
+          </div>
+
+          <div
+            class="modal-footer"
+            style="
+
+
+
         padding-top: 0px;
-        margin-top: 0px;">
-                    <button onclick="saveData()" id="registerloading" class="btn btn-outline-success my-2 my-sm-0" type="button">Register</button>
 
-                </div>
-            </div>
+
+
+        margin-top: 0px;"
+          >
+            <button
+              onclick="saveData()"
+              id="registerloading"
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+            >
+              Register
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Loading Register.. -->
-    <script>
-        $(document).ready(function () {
-            $('#registerloading').on('click', function () {
-                var $this = $(this);
-                var loadingText = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-                if ($(this).html() !== loadingText) {
-                    $this.data('original-text', $(this).html());
-                    $this.html(loadingText);
-                }
-                setTimeout(function () {
-                    $this.html($this.data('original-text'));
-                }, 1800);
-            });
-        })
-    </script>
-
-    <!-- Popup Script Register -->
-    <script>
-        $('#BtnRegister').on('shown.bs.modal', function () {
-            $('#RegisterModal').trigger('focus')
-        })
-    </script>
 
     <!-- Modal Login -->
-    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="login_div" class="modal-body">
+    <div
+      class="modal fade"
+      id="LoginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="login_div" class="modal-body">
+            <form role="form">
+              <h3>Login</h3>
+              <hr class="colorgraph" />
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email_login"
+                  class="form-control input-lg"
+                  placeholder="Email Address or Username"
+                  tabindex="4"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password_login"
+                  class="form-control input-lg"
+                  placeholder="Password"
+                  tabindex="5"
+                />
+              </div>
+              <hr class="colorgraph" />
+              <p class="small mt-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are
+                indicating that you have read and agree to the
+                <a href="#" class="ps-hero__content__link">Terms of Use</a> and
+                <a href="#">Privacy Policy</a>.
+              </p>
+            </form>
+          </div>
 
-                    <form role="form">
-                        <h3>Login</h3>
-                        <hr class="colorgraph">
-                        <div class="form-group">
-                            <input type="email" name="email" id="email_login" class="form-control input-lg" placeholder="Email Address or Username"
-                                tabindex="4">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" id="password_login" class="form-control input-lg"
-                                placeholder="Password" tabindex="5">
-                        </div>
-                        <hr class="colorgraph">
-                        <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are indicating
-                            that you have
-                            read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a
-                                href="#">Privacy Policy</a>.
-                        </p>
-                    </form>
+          <div
+            class="modal-footer"
+            style="
 
-                </div>
 
-                <div class="modal-footer" style="
+
           padding-top: 0px;
-          margin-top: 0px;">
 
-                    <button onclick="signIn()" id="loginLoading" class="btn btn-outline-danger my-2 my-sm-0" type="button">Login</button>
 
-                </div>
-            </div>
+
+          margin-top: 0px;"
+          >
+            <button
+              onclick="signIn()"
+              id="loginLoading"
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-
-    <!-- Loading Register.. -->
-    <script>
-        $(document).ready(function () {
-            $('#loginLoading').on('click', function () {
-                var $this = $(this);
-                var loadingText = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-                if ($(this).html() !== loadingText) {
-                    $this.data('original-text', $(this).html());
-                    $this.html(loadingText);
-                }
-                setTimeout(function () {
-                    $this.html($this.data('original-text'));
-                }, 1000);
-            });
-        })
-    </script>
-
-
-    <!-- Popup Script -->
-    <script>
-        $('#BtnLogin').on('shown.bs.modal', function () {
-            $('#LoginModal').trigger('focus')
-        })
-    </script>
-
 
     <!-- Content -->
 
-
-
-
     <!-- Check for Login Page ! -->
 
-    <!-- Footer  -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container bottom_border">
-            <div class="row">
-                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-                    <!--headin5_amrc-->
-                    <p class="mb10"> Smart Mini Farm is supervised by Information Engineering students KMITL.
-                        We are eager to grow in this team and will be happy to hear from you.
-                        And if you are interested in the IOT or the electronics to help grow vegetables,
-                        you can see details from this site at all.</p>
-                    <p><i class="fa fa-location-arrow"></i>King Mongkut's Institute of Technology Ladkrabang </p>
-                    <p><i class="fa fa-phone"></i> +91-9999878398 </p>
-                    <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+      <div class="container bottom_border">
+        <div class="row">
+          <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+            <!-- headin5_amrc -->
+            <p class="mb10">
+              Smart Mini Farm is supervised by Information Engineering students
+              KMITL. We are eager to grow in this team and will be happy to hear
+              from you. And if you are interested in the IOT or the electronics
+              to help grow vegetables, you can see details from this site at
+              all.
+            </p>
+            <p>
+              <i class="fa fa-location-arrow"></i>King Mongkut's Institute of
+              Technology Ladkrabang
+            </p>
+            <p><i class="fa fa-phone"></i> +91-9999878398</p>
+            <p><i class="fa fa fa-envelope"></i> info@example.com</p>
+          </div>
 
-
-                </div>
-
-
-                <div class=" col-sm-4 col-md  col-6 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                    <!--headin5_amrc-->
-                    <ul class="footer_ul_amrc">
-                        <li><a href="#">Image Rectoucing</a></li>
-                        <li><a href="#">Clipping Path</a></li>
-                        <li><a href="#">Hollow Man Montage</a></li>
-                        <li><a href="#">Ebay & Amazon</a></li>
-                        <li><a href="#">Hair Masking/Clipping</a></li>
-                        <li><a href="#">Image Cropping</a></li>
-                    </ul>
-                    <!--footer_ul_amrc ends here-->
-                </div>
-
-
-                <div class=" col-sm-4 col-md  col-6 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-                    <!--headin5_amrc-->
-                    <ul class="footer_ul_amrc">
-                        <li><a href="#">Remove Background</a></li>
-                        <li><a href="#">Shadows & Mirror Reflection</a></li>
-                        <li><a href="#">Logo Design</a></li>
-                        <li><a href="#">Vectorization</a></li>
-                        <li><a href="#">Hair Masking/Clipping</a></li>
-                        <li><a href="#">Image Cropping</a></li>
-                    </ul>
-                    <!--footer_ul_amrc ends here-->
-                </div>
-
-
-                <div class=" col-sm-4 col-md  col-12 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-                    <!--headin5_amrc ends here-->
-
-                    <ul class="footer_ul2_amrc">
-                        <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-                            <p>Smart Mini Farm is supervised by Information Engineering ...<a href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater">Read
-                                    more</a></p>
-                        </li>
-                        <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-                            <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
-                        </li>
-                        <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-                            <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
-                        </li>
-                    </ul>
-                    <!--footer_ul2_amrc ends here-->
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <ul class="foote_bottom_ul_amrc">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="monitor.html">Monitor</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
-                <li><a href="contact.html">Contact</a></li>
+          <div class=" col-sm-4 col-md  col-6 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+            <!-- headin5_amrc -->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Image Rectoucing</a></li>
+              <li><a href="#">Clipping Path</a></li>
+              <li><a href="#">Hollow Man Montage</a></li>
+              <li><a href="#">Ebay & Amazon</a></li>
+              <li><a href="#">Hair Masking/Clipping</a></li>
+              <li><a href="#">Image Cropping</a></li>
             </ul>
-            <!--foote_bottom_ul_amrc ends here-->
-            <p class="text-center">Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a></p>
+            <!-- footer_ul_amrc ends here -->
+          </div>
 
-            <ul class="social_footer_ul">
-                <li><a href="https://www.facebook.com/Smart-Mini-Farm-316348799171138" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <div class=" col-sm-4 col-md  col-6 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+            <!-- headin5_amrc -->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Remove Background</a></li>
+              <li><a href="#">Shadows & Mirror Reflection</a></li>
+              <li><a href="#">Logo Design</a></li>
+              <li><a href="#">Vectorization</a></li>
+              <li><a href="#">Hair Masking/Clipping</a></li>
+              <li><a href="#">Image Cropping</a></li>
             </ul>
-            <!--social_footer_ul ends here-->
-        </div>
+            <!-- footer_ul_amrc ends here -->
+          </div>
 
+          <div class=" col-sm-4 col-md  col-12 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+            <!-- headin5_amrc ends here -->
+
+            <ul class="footer_ul2_amrc">
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Smart Mini Farm is supervised by Information Engineering ...<a
+                    href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater"
+                    >Read more</a
+                  >
+                </p>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing...<a href="#"
+                    >https://www.lipsum.com/</a
+                  >
+                </p>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing...<a href="#"
+                    >https://www.lipsum.com/</a
+                  >
+                </p>
+              </li>
+            </ul>
+            <!-- footer_ul2_amrc ends here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="monitor.html">Monitor</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- foote_bottom_ul_amrc ends here -->
+        <p class="text-center">
+          Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a>
+        </p>
+
+        <ul class="social_footer_ul">
+          <li>
+            <a
+              href="https://www.facebook.com/Smart-Mini-Farm-316348799171138"
+              target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+        <!-- social_footer_ul ends here -->
+      </div>
     </footer>
-
-
-
-
-
-</body>
-
+  </body>
 </html>

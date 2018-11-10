@@ -1,587 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Smart Mini Farm</title>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <title>Smart Mini Farm</title>
-  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- close for scroll menu -->
+    <!--
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        crossorigin="anonymous"></script>
 
-  
-  <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+    <script>
+      $(document).ready(function() {
+        $(".card").hover(
+          // trigger when mouse hoer
+          function() {
+            $(this).animate(
+              {
+                marginTop: "-=1%"
+              },
+              200
+            );
+          },
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <!-- close for scroll menu -->
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $('.card').hover(
-        // trigger when mouse hoer
-        function () {
-          $(this).animate({
-            marginTop: "-=1%",
-          }, 200);
-        },
-
-        //trigger when mouse out 
-        function () {
-          $(this).animate({
-            marginTop: "0%"
-          }, 200);
-        }
-      );
-    });
-  </script>
-
-  <!-- Test Spiner Loading -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Sweet Alert -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-  <script src="js/config_firebase.js"></script>
-  <script src="js/database.js"></script>
-</head>
-
-<body>
-
-  <!-- Menu Head -->
-  
-  <div class="jumbotron" style="margin-bottom: 0px;">
-    <h1 class="display-3">SmartMiniFarm</h1>
-    <p class="lead">Let's Learning to Grow Tree</p>
-  </div>
-
-
-  <nav class="navbar navbar-expand-lg navbar-light be-light">
-
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="collapse_target">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo.svg" width="50" height="50" class="d-inline-block align-top" alt=""></a>
-      <span style="font-size:25px;">SmartMiniFarm</span>
-
-
-
-      <ul class="navbar-nav ml-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="monitor.html">Monitor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="shop.html">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="roadmap.html">Roadmap</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        &nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="BtnRegister" data-toggle="modal"
-            data-target="#RegisterModal">Register</button>
-        </li>
-        &nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-          <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogin" data-toggle="modal"
-            data-target="#LoginModal">Login</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="logout()" class="btn btn-outline-danger my-2 my-sm-0" type="button" id="BtnLogout" style="display: none">Logout</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Close Menu-->
-
-  <br><br>
-
-  <!-- Content -->
-  <!-- Button trigger modal -->
-
-
-
-
-  <!-- Modal Register -->
-  <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <form id="form_register" role="form">
-            <h3>Register</h3>
-            <hr class="colorgraph">
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name"
-                    tabindex="1" required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name"
-                    tabindex="2" required>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name"
-                tabindex="3" required>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control input-lg" aria-describedby="emailHelp"
-                placeholder="Email Address" tabindex="4">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="password" name="password" id="password" class="form-control input-lg" aria-describedby="passwordHelpBlock"
-                    placeholder="Password" tabindex="5">
-                  <small id="passwordHelpBlock" class="form-text text-muted">
-                    Your password must be 8 characters.
-                  </small>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg"
-                    placeholder="Confirm Password" tabindex="6">
-
-                </div>
-              </div>
-            </div>
-
-            <hr class="colorgraph">
-            <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are indicating that you have
-              read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
-            </p>
-          </form>
-
-        </div>
-
-        <div class="modal-footer" style="
-          padding-top: 0px;
-          margin-top: 0px;">
-          <button onclick="saveData()" id="registerloading" class="btn btn-outline-success my-2 my-sm-0" type="button">Register</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Loading Register.. -->
-  <script>
-    $(document).ready(function () {
-      $('#registerloading').on('click', function () {
-        var $this = $(this);
-        var loadingText = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-        if ($(this).html() !== loadingText) {
-          $this.data('original-text', $(this).html());
-          $this.html(loadingText);
-        }
-        setTimeout(function () {
-          $this.html($this.data('original-text'));
-        }, 1800);
+          //trigger when mouse out
+          function() {
+            $(this).animate(
+              {
+                marginTop: "0%"
+              },
+              200
+            );
+          }
+        );
       });
-    })
-  </script>
-
-  <!-- Popup Script Register -->
-  <script>
-    $('#BtnRegister').on('shown.bs.modal', function () {
-      $('#RegisterModal').trigger('focus')
-    })
-  </script>
-
-
-
-  <!-- Modal Login -->
-  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div id="login_div" class="modal-body">
-
-          <form role="form">
-            <h3>Login</h3>
-            <hr class="colorgraph">
-            <div class="form-group">
-              <input type="email" name="email" id="email_login" class="form-control input-lg" placeholder="Email Address or Username"
-                tabindex="4">
-            </div>
-            <div class="form-group">
-              <input type="password" name="password" id="password_login" class="form-control input-lg" placeholder="Password"
-                tabindex="5">
-            </div>
-            <hr class="colorgraph">
-            <p class="small mt-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are indicating that you have
-              read and agree to the <a href="#" class="ps-hero__content__link">Terms of Use</a> and <a href="#">Privacy Policy</a>.
-            </p>
-          </form>
-
-        </div>
-
-        <div class="modal-footer" style="
-          padding-top: 0px;
-          margin-top: 0px;">
-
-          <button onclick="signIn()" id="loginLoading" class="btn btn-outline-danger my-2 my-sm-0" type="button">Login</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Test Enter -->
-  <script>
-    var email_login = document.getElementById("email_login");
-    var password_login = document.getElementById("password_login");
-    email_login.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if(event.keyCode === 13) {
-           document.getElementById("loginLoading").click();
-        }
-    });
-    password_login.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if(event.keyCode === 13) {
-          document.getElementById("loginLoading").click();
-        }
-    });
     </script>
 
+    <!-- Test Spiner Loading -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <!-- Loading Login.. -->
-  <script>
-    $(document).ready(function () {
-      $('#loginLoading').on('click', function () {
-        var $this = $(this);
-        var loadingText = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-        if ($(this).html() !== loadingText) {
-          $this.data('original-text', $(this).html());
-          $this.html(loadingText);
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script src="js/config_firebase.js"></script>
+    <script src="js/database.js"></script>
+
+    <!-- Jquery Script -->
+    <script src="js/click_jquery.js"></script>
+  </head>
+
+  <body>
+    <!-- Menu Head -->
+
+    <nav class="navbar navbar-expand-lg navbar-light be-light">
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#collapse_target"
+        aria-controls="collapse_target"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/logo.svg"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+            alt=""
+        /></a>
+
+        <span style="font-size:25px;">SmartMiniFarm</span>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="monitor.html">Monitor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="roadmap.html">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+              id="BtnRegister"
+              data-toggle="modal"
+              data-target="#RegisterModal"
+            >
+              Register
+            </button>
+          </li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="nav-item">
+            <button
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+              id="BtnLogin"
+              data-toggle="modal"
+              data-target="#LoginModal"
+            >
+              Login
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              onclick="logout()"
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+              id="BtnLogout"
+              style="display: none"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Close Menu -->
+
+    <br /><br />
+
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="RegisterModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form_register" role="form">
+              <h3>Register</h3>
+              <hr class="colorgraph" />
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="first_name"
+                      id="first_name"
+                      class="form-control input-lg"
+                      placeholder="First Name"
+                      tabindex="1"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="last_name"
+                      class="form-control input-lg"
+                      placeholder="Last Name"
+                      tabindex="2"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="display_name"
+                  id="display_name"
+                  class="form-control input-lg"
+                  placeholder="Display Name"
+                  tabindex="3"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control input-lg"
+                  aria-describedby="emailHelp"
+                  placeholder="Email Address"
+                  tabindex="4"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control input-lg"
+                      aria-describedby="passwordHelpBlock"
+                      placeholder="Password"
+                      tabindex="5"
+                    />
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      Your password must be 8 characters.
+                    </small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password_confirmation"
+                      id="password_confirmation"
+                      class="form-control input-lg"
+                      placeholder="Confirm Password"
+                      tabindex="6"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <hr class="colorgraph" />
+              <p class="small mt-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing up, you are
+                indicating that you have read and agree to the
+                <a href="#" class="ps-hero__content__link">Terms of Use</a> and
+                <a href="#">Privacy Policy</a>.
+              </p>
+            </form>
+          </div>
+
+          <div
+            class="modal-footer"
+            style="
+
+          padding-top: 0px;
+
+          margin-top: 0px;"
+          >
+            <button
+              onclick="saveData()"
+              id="registerloading"
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div
+      class="modal fade"
+      id="LoginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="login_div" class="modal-body">
+            <form role="form">
+              <h3>Login</h3>
+              <hr class="colorgraph" />
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email_login"
+                  class="form-control input-lg"
+                  placeholder="Email Address or Username"
+                  tabindex="4"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password_login"
+                  class="form-control input-lg"
+                  placeholder="Password"
+                  tabindex="5"
+                />
+              </div>
+              <hr class="colorgraph" />
+              <p class="small mt-3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing in, you are
+                indicating that you have read and agree to the
+                <a href="#" class="ps-hero__content__link">Terms of Use</a> and
+                <a href="#">Privacy Policy</a>.
+              </p>
+            </form>
+          </div>
+
+          <div
+            class="modal-footer"
+            style="
+
+          padding-top: 0px;
+
+          margin-top: 0px;"
+          >
+            <button
+              onclick="signIn()"
+              id="loginLoading"
+              class="btn btn-outline-danger my-2 my-sm-0"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Enter -->
+    <script>
+      var email_login = document.getElementById("email_login");
+      var password_login = document.getElementById("password_login");
+      email_login.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          document.getElementById("loginLoading").click();
         }
-        setTimeout(function () {
-          $this.html($this.data('original-text'));
-        }, 1000);
       });
-    })
-  </script>
+      password_login.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          document.getElementById("loginLoading").click();
+        }
+      });
+    </script>
 
+    <!-- Check for Login Page ! -->
 
-  <!-- Popup Script -->
-  <script>
-    $('#BtnLogin').on('shown.bs.modal', function () {
-      $('#LoginModal').trigger('focus')
-    })
-  </script>
+    <!-- Content -->
+    <div class="container">
+      <h1 class="display-2">Smart Mini Farm</h1>
+      <br />
 
-
-  <!-- Check for Login Page ! -->
-
-
-  <!-- Content -->
-  <div class="container">
-
-    <h1 class="display-2">Smart Mini Farm</h1>
-    <br>
-
-    <div class="row">
-      <div class="col-lg-4 col-xs-auto" style="padding-right: 10px;">
-
-        <img class="mw-100" src="https://secure.img2-fg.wfcdn.com/im/28287695/resize-h800-w800%5Ecompr-r85/5113/51138305/Mini+Tree+in+Basket.jpg"
-          class="rounded float-left" alt="Max-width 100%">
-      </div>
-      
-      <div class="col-lg-4 col-xs-auto" >
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://www.rimolgreenhouses.com/sites/default/files/images/blog/D13_1.JPG"
-            width="100%" height="100%" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Learning to Organics</h5>
-            <p class="card-text">Non-chemical products No modifications Genetically modified organisms (GMOs)....</p>
-            <a id="learning1" class="btn btn-outline-success my-2 my-sm-0">Go Learning</a>
-
-          </div>
-        </div>
-      </div>
-      <!-- When Click Learning to Hydroponics -->
-      <script type="text/javascript">
-        $('a#learning1').click(function () {
-          var account = firebase.auth();
-          account.onAuthStateChanged(function (user) {
-            if (user) {
-              swal("Your Welcome", "You can access This Page!", "success");
-              setTimeout(function () {
-                location.href = "organ.html";
-              }, 1500);
-            }
-            else {
-              swal("Login For This Page", "", "error");
-              setTimeout(function () {
-                location.reload();
-              }, 1200);
-            }
-          });
-        });
-      </script>
-
-
-      <div class="col-lg-4 col-xs-auto">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="https://www.rimolgreenhouses.com/sites/default/files/images/blog/D13_1.JPG"
-            width="100%" height="100%" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Learning to Hydroponics</h5>
-            <p class="card-text">Planting without using soil, but using water with plant nutrients dissolving or
-              growing plants...</p>
-            <a id="learning2" class="btn btn-outline-success my-2 my-sm-0">Go Learning</a>
-          </div>
-        </div>
-      </div>
-      <!-- When Click Learning to Hydroponics -->
-      <script type="text/javascript">
-        $('a#learning2').click(function () {
-          var account = firebase.auth();
-          account.onAuthStateChanged(function (user) {
-            if (user) {
-              swal("Your Welcome", "You can access This Page!", "success");
-              setTimeout(function () {
-                location.href = "hydro.html";
-              }, 1500);
-            }
-            else {
-              swal("Login For This Page", "", "error");
-              setTimeout(function () {
-                location.reload();
-              }, 1200);
-            }
-          });
-        });
-      </script>
-
-    </div>
-  </div>
-  <br>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="30" aria-valuemin="0"
-      aria-valuemax="100"></div>
-    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0"
-      aria-valuemax="100"></div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <!-- Button trigger modal -->
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6" id="content">
-        <img class="mw-100" src="img/connectivity.svg" class="rounded float-left" alt="Max-width 100%">
-      </div>
-      <div class="col-lg-6" id="content">
-        <p>It's a secure and scalable platform to help organizations quickly build and deploy IoT applications. It also
-          records and analyzes its IoT data to the fullest extent possible. This service enables organizations to
-          optimize and extend the capabilities of enterprise applications with data and data streaming from connected
-          devices.
-          Internet offerings of commercially available offerings tend to focus on particular functions, such as
-          connection / device management. Cross-device, enterprise-class collaboration between devices and
-          applications. Or, in combination with middleware elements that exist in the third-party cloud environment.
-          The picture on the left is IoT Cloud, which provides cloud connectivity, securely and securely collects data
-          from any device in any market and accelerates launch time with a secure open platform and scalable</p>
-      </div>
-
-    </div>
-  </div>
-  <br>
-  <br>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6" id="content">
-        <p>
-          The platform features data collection adapters that allow sending data to various databases or data analytics
-          systems.
-          The figure on the right shows the analysis of the data for use in agricultural processing. Such as the use of
-          temperature sensors. The system will then store that information and analyze it for real-time results.
-          And the system will connect to other devices that can connect to the Internet as well. It analyzes the data
-          to find the result of the work and then sends the result to the io device that we ordered to work as we do.</p>
-      </div>
-      <div class="col-lg-6" id="content">
-        <img class="mw-100" src="img/data_analytics.svg" class="rounded float-left" alt="Max-width 100%">
-      </div>
-    </div>
-  </div>
-  <br><br>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6" id="content">
-        <img class="mw-100" src="img/data_visualization.svg" class="rounded float-left" alt="Max-width 100%">
-      </div>
-      <div class="col-lg-6" id="content">
-        <p>The next is the display. After the analysis to achieve the results are all the same. It will display the
-          interface in a beautiful, easy to understand, and comfortable to use. Smart Mini Farm will analyze and find
-          results to display on the site to those interested in this product, such as display temperature, humidity,
-          and growth of vegetables.
-          Besides data visualization, widgets allow you to interact with devices by sending commands, changing
-          configuration and metadata, etc.</p>
-      </div>
-    </div>
-  </div>
-  <br><br>
-
-  <!-- Footer  -->
-  <footer class="footer">
-    <div class="container bottom_border">
       <div class="row">
-        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-          <!--headin5_amrc-->
-          <p class="mb10"> Smart Mini Farm is supervised by Information Engineering students KMITL.
-            We are eager to grow in this team and will be happy to hear from you.
-            And if you are interested in the IOT or the electronics to help grow vegetables,
-            you can see details from this site at all.</p>
-          <p><i class="fa fa-location-arrow"></i>King Mongkut's Institute of Technology Ladkrabang </p>
-          <p><i class="fa fa-phone"></i> +91-9999878398 </p>
-          <p><i class="fa fa fa-envelope"></i> info@example.com </p>
-
-
+        <div class="col-lg-4 col-xs-4">
+          <img
+            class="mw-100"
+            src="https://secure.img2-fg.wfcdn.com/im/28287695/resize-h800-w800%5Ecompr-r85/5113/51138305/Mini+Tree+in+Basket.jpg"
+            class="rounded float-left"
+            alt="Max-width 80%"
+          />
+          <br />
         </div>
 
-
-        <div class=" col-sm-4 col-md  col-6 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-          <!--headin5_amrc-->
-          <ul class="footer_ul_amrc">
-            <li><a href="#">Image Rectoucing</a></li>
-            <li><a href="#">Clipping Path</a></li>
-            <li><a href="#">Hollow Man Montage</a></li>
-            <li><a href="#">Ebay & Amazon</a></li>
-            <li><a href="#">Hair Masking/Clipping</a></li>
-            <li><a href="#">Image Cropping</a></li>
-          </ul>
-          <!--footer_ul_amrc ends here-->
+        <div class="col-lg-4 col-xs-4" style="padding-top:20px;">
+          <div class="card" style="width: 20rem;">
+            <img
+              class="card-img-top"
+              src="https://www.rimolgreenhouses.com/sites/default/files/images/blog/D13_1.JPG"
+              width="100%"
+              height="100%"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Learning to Organics</h5>
+              <p class="card-text">
+                Non-chemical products No modifications Genetically modified
+                organisms (GMOs)....
+              </p>
+              <a id="learning1" class="btn btn-outline-success my-2 my-sm-0"
+                >Go Learning</a
+              >
+            </div>
+          </div>
         </div>
+        <!-- When Click Learning to Hydroponics -->
+        <script type="text/javascript">
+          $("a#learning1").click(function() {
+            var account = firebase.auth();
+            account.onAuthStateChanged(function(user) {
+              if (user) {
+                swal("Your Welcome", "You can access This Page!", "success");
+                setTimeout(function() {
+                  location.href = "organ.html";
+                }, 1500);
+              } else {
+                swal("Login For This Page", "", "error");
+                setTimeout(function() {
+                  location.reload();
+                }, 1200);
+              }
+            });
+          });
+        </script>
 
-
-        <div class=" col-sm-4 col-md  col-6 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-          <!--headin5_amrc-->
-          <ul class="footer_ul_amrc">
-            <li><a href="#">Remove Background</a></li>
-            <li><a href="#">Shadows & Mirror Reflection</a></li>
-            <li><a href="#">Logo Design</a></li>
-            <li><a href="#">Vectorization</a></li>
-            <li><a href="#">Hair Masking/Clipping</a></li>
-            <li><a href="#">Image Cropping</a></li>
-          </ul>
-          <!--footer_ul_amrc ends here-->
+        <div class="col-lg-4 col-xs-4" style="padding-top:20px;">
+          <div class="card" style="width: 20rem;">
+            <img
+              class="card-img-top"
+              src="https://www.rimolgreenhouses.com/sites/default/files/images/blog/D13_1.JPG"
+              width="100%"
+              height="100%"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Learning to Hydroponics</h5>
+              <p class="card-text">
+                Planting without using soil, but using water with plant
+                nutrients dissolving or growing plants...
+              </p>
+              <a id="learning2" class="btn btn-outline-success my-2 my-sm-0"
+                >Go Learning</a
+              >
+            </div>
+          </div>
         </div>
-
-
-        <div class=" col-sm-4 col-md  col-12 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-          <!--headin5_amrc ends here-->
-
-          <ul class="footer_ul2_amrc">
-            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-              <p>Smart Mini Farm is supervised by Information Engineering ...<a href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater">Read
-                  more</a></p>
-            </li>
-            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
-            </li>
-            <li><a href="#"><i class="fab fa-facebook-f fleft padding-right"></i> </a>
-              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
-            </li>
-          </ul>
-          <!--footer_ul2_amrc ends here-->
-        </div>
+        <!-- When Click Learning to Hydroponics -->
+        <script type="text/javascript">
+          $("a#learning2").click(function() {
+            var account = firebase.auth();
+            account.onAuthStateChanged(function(user) {
+              if (user) {
+                swal("Your Welcome", "You can access This Page!", "success");
+                setTimeout(function() {
+                  location.href = "hydro.html";
+                }, 1500);
+              } else {
+                swal("Login For This Page", "", "error");
+                setTimeout(function() {
+                  location.reload();
+                }, 1200);
+              }
+            });
+          });
+        </script>
       </div>
     </div>
-
+    <br />
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        style="width: 25%"
+        aria-valuenow="15"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+      <div
+        class="progress-bar bg-success"
+        role="progressbar"
+        style="width: 50%"
+        aria-valuenow="30"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+      <div
+        class="progress-bar bg-info"
+        role="progressbar"
+        style="width: 25%"
+        aria-valuenow="20"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <!-- Button trigger modal -->
 
     <div class="container">
-      <ul class="foote_bottom_ul_amrc">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="monitor.html">Monitor</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!--foote_bottom_ul_amrc ends here-->
-      <p class="text-center">Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a></p>
-
-      <ul class="social_footer_ul">
-        <li><a href="https://www.facebook.com/Smart-Mini-Farm-316348799171138" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-      </ul>
-      <!--social_footer_ul ends here-->
+      <div class="row">
+        <div class="col-lg-6" id="content">
+          <img
+            class="mw-100"
+            src="img/connectivity.svg"
+            class="rounded float-left"
+            alt="Max-width 100%"
+          />
+        </div>
+        <div class="col-lg-6" id="content">
+          <p>
+            It's a secure and scalable platform to help organizations quickly
+            build and deploy IoT applications. It also records and analyzes its
+            IoT data to the fullest extent possible. This service enables
+            organizations to optimize and extend the capabilities of enterprise
+            applications with data and data streaming from connected devices.
+            Internet offerings of commercially available offerings tend to focus
+            on particular functions, such as connection / device management.
+            Cross-device, enterprise-class collaboration between devices and
+            applications. Or, in combination with middleware elements that exist
+            in the third-party cloud environment. The picture on the left is IoT
+            Cloud, which provides cloud connectivity, securely and securely
+            collects data from any device in any market and accelerates launch
+            time with a secure open platform and scalable
+          </p>
+        </div>
+      </div>
     </div>
+    <br />
+    <br />
 
-  </footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6" id="content">
+          <p>
+            The platform features data collection adapters that allow sending
+            data to various databases or data analytics systems. The figure on
+            the right shows the analysis of the data for use in agricultural
+            processing. Such as the use of temperature sensors. The system will
+            then store that information and analyze it for real-time results.
+            And the system will connect to other devices that can connect to the
+            Internet as well. It analyzes the data to find the result of the
+            work and then sends the result to the io device that we ordered to
+            work as we do.
+          </p>
+        </div>
+        <div class="col-lg-6" id="content">
+          <img
+            class="mw-100"
+            src="img/data_analytics.svg"
+            class="rounded float-left"
+            alt="Max-width 100%"
+          />
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6" id="content">
+          <img
+            class="mw-100"
+            src="img/data_visualization.svg"
+            class="rounded float-left"
+            alt="Max-width 100%"
+          />
+        </div>
+        <div class="col-lg-6" id="content">
+          <p>
+            The next is the display. After the analysis to achieve the results
+            are all the same. It will display the interface in a beautiful, easy
+            to understand, and comfortable to use. Smart Mini Farm will analyze
+            and find results to display on the site to those interested in this
+            product, such as display temperature, humidity, and growth of
+            vegetables. Besides data visualization, widgets allow you to
+            interact with devices by sending commands, changing configuration
+            and metadata, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br /><br />
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container bottom_border">
+        <div class="row">
+          <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+            <!-- headin5_amrc -->
+            <p class="mb10">
+              Smart Mini Farm is supervised by Information Engineering students
+              KMITL. We are eager to grow in this team and will be happy to hear
+              from you. And if you are interested in the IOT or the electronics
+              to help grow vegetables, you can see details from this site at
+              all.
+            </p>
+            <p>
+              <i class="fa fa-location-arrow"></i>King Mongkut's Institute of
+              Technology Ladkrabang
+            </p>
+            <p><i class="fa fa-phone"></i> +91-9999878398</p>
+            <p><i class="fa fa fa-envelope"></i> info@example.com</p>
+          </div>
 
+          <div class=" col-sm-4 col-md  col-6 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+            <!-- headin5_amrc -->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Image Rectoucing</a></li>
+              <li><a href="#">Clipping Path</a></li>
+              <li><a href="#">Hollow Man Montage</a></li>
+              <li><a href="#">Ebay & Amazon</a></li>
+              <li><a href="#">Hair Masking/Clipping</a></li>
+              <li><a href="#">Image Cropping</a></li>
+            </ul>
+            <!-- footer_ul_amrc ends here -->
+          </div>
 
+          <div class=" col-sm-4 col-md  col-6 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+            <!-- headin5_amrc -->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Remove Background</a></li>
+              <li><a href="#">Shadows & Mirror Reflection</a></li>
+              <li><a href="#">Logo Design</a></li>
+              <li><a href="#">Vectorization</a></li>
+              <li><a href="#">Hair Masking/Clipping</a></li>
+              <li><a href="#">Image Cropping</a></li>
+            </ul>
+            <!-- footer_ul_amrc ends here -->
+          </div>
 
+          <div class=" col-sm-4 col-md  col-12 col">
+            <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+            <!-- headin5_amrc ends here -->
 
-</body>
+            <ul class="footer_ul2_amrc">
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Smart Mini Farm is supervised by Information Engineering ...<a
+                    href="https://www.facebook.com/316348799171138/photos/a.316355485837136/316355389170479/?type=3&theater"
+                    >Read more</a
+                  >
+                </p>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing...<a href="#"
+                    >https://www.lipsum.com/</a
+                  >
+                </p>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-facebook-f fleft padding-right"></i>
+                </a>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing...<a href="#"
+                    >https://www.lipsum.com/</a
+                  >
+                </p>
+              </li>
+            </ul>
+            <!-- footer_ul2_amrc ends here -->
+          </div>
+        </div>
+      </div>
 
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="monitor.html">Monitor</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- foote_bottom_ul_amrc ends here -->
+        <p class="text-center">
+          Copyright @2018 | KMITL@ITE <a href="index.html">Smart Mini Farm</a>
+        </p>
+
+        <ul class="social_footer_ul">
+          <li>
+            <a
+              href="https://www.facebook.com/Smart-Mini-Farm-316348799171138"
+              target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+        <!-- social_footer_ul ends here -->
+      </div>
+    </footer>
+  </body>
 </html>
