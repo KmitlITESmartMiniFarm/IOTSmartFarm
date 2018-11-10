@@ -1,4 +1,24 @@
 
+firebase.auth().onAuthStateChanged(function (user) {
+
+    if (user) {
+      // User is signed in.
+      console.log('logined user12324');
+      console.log(user)
+      
+      document.getElementById("BtnLogin").style.display = "none";    //close
+      document.getElementById("BtnRegister").style.display = "none";
+      document.getElementById("BtnLogout").style.display = "inline-block";  //open
+      
+    
+    } else {
+      // No user is signed in.
+      console.log('No User login');
+      document.getElementById("BtnLogout").style.display = "none";
+      document.getElementById("BtnLogin").style.display = "inline-block";
+  
+    }
+  });
 
 function saveData() {
 
@@ -121,24 +141,6 @@ function logout() {
 }
 
 
-
-
-
-firebase.auth().onAuthStateChanged(function (user) {
-
-    if (user) {
-      // User is signed in.
-      console.log('logined user!!');
-      document.getElementById("BtnLogout").style.display = "inline-block";  //open
-      document.getElementById("BtnLogin").style.display = "none";    //close
-      document.getElementById("BtnRegister").style.display = "none";
-    } else {
-      // No user is signed in.
-      console.log('No User login');
-      document.getElementById("BtnLogin").style.display = "inline-block";
-      document.getElementById("BtnLogout").style.display = "none";
-    }
-  });
 
 
 

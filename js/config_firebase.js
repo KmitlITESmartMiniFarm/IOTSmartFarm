@@ -1,3 +1,4 @@
+
 var config = {
     apiKey: "AIzaSyCtotB8akDdLjyKqXQ4WZpFRlTxQ_CWMnA",
     authDomain: "iotsmartminifarm.firebaseapp.com",

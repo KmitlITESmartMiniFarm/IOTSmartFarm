@@ -62,5 +62,15 @@
         $('#LoginModal').trigger('focus')
       });
 
-
-  
+      // Navbar Hide
+      (function ($) {
+        $(document).ready(function(){
+          
+        // hide .navbar first
+        $(".navbar").fadeOut();
+        $(".navbar").fadeIn();
+        
+       
+      
+      });
+        }(jQuery));
