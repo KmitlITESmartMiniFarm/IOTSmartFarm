@@ -59,6 +59,7 @@ function onMessageArrived(message) {
     var Temp = JSON.parse(message.payloadString);
     updateDonutChart('#specificChart', Temp, true);
     result.push(Temp);
+    measure_water(Temp);
   }
 
   if (message.destinationName == "smartfarm/humidity_soid") {
@@ -85,9 +86,9 @@ function onMessageArrived(message) {
         legendText: "{label}",
         indexLabel: "{label}: #percent%",
         dataPoints: [
-          { label: "Temperature", y: result[0] },
-          { label: "Humidity", y: result[1] },
-          { label: "Mositer", y: 68 }
+          { label: "HumiditySoid", y: result[0] },
+          { label: "Temperature", y: result[1] },
+          { label: "Humidity", y: result[2] }
         ]
       }]
     };
@@ -105,19 +106,22 @@ function onMessageArrived(message) {
 function led_on() {
   send("on");
   $('#light-bulb2').css({ 'opacity': '1' });
+  $("#status-pump-off").css({ 'background-color': '#7eda99' })
+  
 }
+
 function led_off() {
   send("off");
   $('#light-bulb2').css({ 'opacity': '0' });
+  $("#status-pump-off").css({ 'background-color': '#fe6847' })
+  
 }
+
 function send(msg) {
   message = new Paho.MQTT.Message(msg);
   message.destinationName = "/server";
   client.send(message);
 }
-
-
-
 
 
 /**
@@ -155,6 +159,8 @@ function updateDonutChart(el, percent, donut) {
   $(el + ' .num').text(percent);
   $(el + ' .left-side').css('transform', 'rotate(' + deg + 'deg)');
 }
+
+
 
 
 

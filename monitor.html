@@ -9,6 +9,8 @@
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+
+   
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -62,10 +64,19 @@
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+  
+
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
     <script src="js/config_firebase.js"></script>
     <script src="js/database.js"></script>
+
+       <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  
+
+
 
     <!-- MQTT Server -->
     <script src="js/config_mqtt.js"></script>
@@ -76,14 +87,24 @@
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
+    <!-- Head for water measure-->
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-plus-ui.min.js"></script>
+<script src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-ui-slider-pips.js"></script>
+
     <!-- Jquery Script -->
     <script src="js/click_jquery.js"></script>
+
+     
+    
   </head>
 
   <body>
     <!-- Menu Head -->
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light be-light">
+    <nav class="navbar navbar-expand-lg navbar-light be-light">
       <button
         class="navbar-toggler"
         data-toggle="collapse"
@@ -553,39 +574,96 @@
 
         <br />
 
+        
+<script>
+// JS for Water Measure
+
+FusionCharts.ready(function(){
+  
+  var fusioncharts = new FusionCharts({
+  "type": "cylinder",
+  "dataFormat": "json",
+  "id": "fuelMeter",
+  "renderAt": "chart-container",
+  "width": "200",
+  "height": "350",
+  "dataSource": {
+      "chart": {
+          "theme": "fint",
+          "caption": "Water Level in Bucket",
+          "subcaption": "",
+          "lowerLimit": "0",
+          "upperLimit": "15",
+          "lowerLimitDisplay": "Empty",
+          "upperLimitDisplay": "Full",
+          "numberSuffix": " ltrs",
+          "showValue": "1",
+          "chartBottomMargin": "25"
+      },
+      "value": "1"
+  }
+});
+  fusioncharts.render();
+  });
+
+
+function measure_water(test){
+  console.log('Measure_water is ' + test )
+  FusionCharts.ready(function(){
+  
+  var fusioncharts = new FusionCharts({
+  "type": "cylinder",
+  "dataFormat": "json",
+  "id": "fuelMeter_edit",
+  "renderAt": "chart-container",
+  "width": "200",
+  "height": "350",
+  "dataSource": {
+      "chart": {
+          "theme": "fint",
+          "caption": "Water Level in Bucket",
+          "subcaption": "",
+          "lowerLimit": "0",
+          "upperLimit": "20",
+          "lowerLimitDisplay": "Empty",
+          "upperLimitDisplay": "Full",
+          "numberSuffix": " ltrs",
+          "showValue": "1",
+          "chartBottomMargin": "25"
+      },
+      "value": test
+  }
+});
+  fusioncharts.render();
+  });
+  
+  
+}
+</script>
+
+
+
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
               <div class="card  bg-light mb-3">
                 <h5 class="card-header" style="color:black">
-                  Control Internet of Things
+                  Messures Water
                 </h5>
-                <div class="card-body">
-                  <div class="card bg-light mb-3" style="width:max-content;">
-                    <div class="card-header" style="color:gray">
-                      LED Control
+
+
+                 <div class="card-body">
+                   
+                    <div class="stuff">
+ 
+                       
+                        
                     </div>
-                    <div class="card-body" style="background:#A9A7A7;">
-                      <div style="text-align: center">
-                        <button
-                          onclick="led_on()"
-                          class="bttn-unite bttn-md bttn-primary"
-                        >
-                          On
-                        </button>
-                        <button
-                          onclick="led_off()"
-                          class="bttn-unite bttn-md bttn-primary"
-                        >
-                          Off
-                        </button>
-                        <div id="light-bulb" class="off ui-draggable">
-                          <div id="light-bulb2" style="opacity: 0; "></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                        <div style="margin-left: 80px;" class="inline" id="chart-container">FusionCharts XT will load here!</div>
+                        
+                </div> 
+
+
               </div>
             </div>
 
@@ -593,6 +671,24 @@
               <div class="card  bg-light mb-3">
                 <h5 class="card-header" style="color:black">Manual Control</h5>
                 <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-lg-6 col-xs-6">
+                              <p><b>Water Pump</b></p>
+                              <div id="status-pump-off" ></div>
+                                                  
+                          </div>
+                          <div class="col-lg-6 col-xs-6">
+                              <p style="margin-left: 18px;"><b>Fan</b></p>
+                              <div id="status-fan-off"></div>
+                                              
+                          </div>
+                          </div>
+
+                    <hr class="colorgraph" />
+                  <div class="row">
+                    
+                    <div class="col-lg-6 col-xs-6">
                   <div>
                     <label class="switch">
                       <input id="water_pump" type="checkbox" />
@@ -600,24 +696,66 @@
                     </label>
                     <b>Water Pump</b>
                   </div>
-                  <!--
+                  <div>
+                      <label class="switch">
+                        <input id="fan" type="checkbox" />
+                        <span class="slider"></span>
+                      </label>
+                      <b>Fan</b>
+                    </div>
                     <div>
                         <label class="switch">
-
-                            <input type="checkbox">
-
-                            <span class="slider"></span>
-
+                          <input id="fan" type="checkbox" />
+                          <span class="slider"></span>
                         </label>
-
                         <b>Fan</b>
+                      </div>
+                      </div>
 
-                    </div>
-                  -->
+
+                      <div class="col-lg-6 col-xs-6">
+                          <div>
+                            <label class="switch">
+                              <input id="water_pump" type="checkbox" />
+                              <span class="slider"></span>
+                            </label>
+                            <b>Water Pump</b>
+                          </div>
+                          <div>
+                              <label class="switch">
+                                <input id="fan" type="checkbox" />
+                                <span class="slider"></span>
+                              </label>
+                              <b>Fan</b>
+                            </div>
+                            <div>
+                                <label class="switch">
+                                  <input id="fan" type="checkbox" />
+                                  <span class="slider"></span>
+                                </label>
+                                <b>Fan</b>
+                              </div>
+                              </div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
+          <div class="row">
+            <div class="col-lg-8">
+                <div class="card  bg-light mb-3">
+                    <h5 class="card-header" style="color:black">Manual Control</h5>
+                    <div class="card-body">
+                        <div
+                        id="chartContainer"
+                        style="height: 300px; width: 100%;"
+                      ></div>
+                    </div>
+                  </div>
+            </div>
+            </div>
+            
         </div>
       </div>
 
@@ -736,7 +874,7 @@
               ></div>
             </div>
 
-            <div class="col-lg-6"><div id="chartdiv"></div></div>
+           
           </div>
         </div>
       </div>

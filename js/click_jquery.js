@@ -4,18 +4,41 @@
             $('#water_pump').click(function () {
               var x = document.getElementById("water_pump");
             if(x.style.display == "none"){
-              console.log('--------');
+              console.log('OFF');
+              led_off();
               x.style.display = "";
-              $('#light-bulb2').css({ 'opacity': '0' });
-        
+
             } else {
-              console.log('11111111');
-              send("on");
-              $('#light-bulb2').css({ 'opacity': '1' });
+              console.log('ON');
+              led_on(); 
               x.style.display = "none";
+              
+              
+
             }
             });
         });
+
+        //Click Manual SmartMiniFarm
+
+        $(document).ready(function () {
+          $('#fan').click(function () {
+            var x = document.getElementById("fan");
+          if(x.style.display == "none"){
+            console.log('OFF'); 
+            led_off();  
+            x.style.display = "";
+            $("#status-fan-off").css({ 'background-color': '#fe6847' })
+            
+      
+          } else {
+            console.log('ON');
+            led_on();
+            x.style.display = "none";
+            $("#status-fan-off").css({ 'background-color': '#7eda99' })
+          }
+          });
+      });
 
 
 // Loading Register
