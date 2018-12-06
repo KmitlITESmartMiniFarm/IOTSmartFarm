@@ -24,7 +24,8 @@ function onConnect() {
   client.subscribe("/server");
   client.subscribe("smartfarm/temperature");
   client.subscribe("smartfarm/humidity");
-  client.subscribe("smartfarm/humidity_soid")
+  client.subscribe("smartfarm/humidity_soid");
+  client.subscribe("smartfarm/measure_water");
 
   message = new Paho.MQTT.Message("off");
   message.destinationName = "/server";
@@ -54,12 +55,16 @@ var result = [];
 function onMessageArrived(message) {
   console.log("onMessageArrived:" + message.destinationName + ' ' + message.payloadString);
 
+  if (message.destinationName == "smartfarm/measure_water") {
+    var water = JSON.parse(message.payloadString);
+    measure_water(water);
+  }
+
 
   if (message.destinationName == "smartfarm/temperature") {
     var Temp = JSON.parse(message.payloadString);
     updateDonutChart('#specificChart', Temp, true);
     result.push(Temp);
-    measure_water(Temp);
   }
 
   if (message.destinationName == "smartfarm/humidity_soid") {
@@ -86,9 +91,10 @@ function onMessageArrived(message) {
         legendText: "{label}",
         indexLabel: "{label}: #percent%",
         dataPoints: [
-          { label: "HumiditySoid", y: result[0] },
-          { label: "Temperature", y: result[1] },
-          { label: "Humidity", y: result[2] }
+          
+          { label: "HumiditySoid", y: result[1] },
+          { label: "Temperature", y: result[2] },
+          { label: "Humidity", y: result[3] }
         ]
       }]
     };

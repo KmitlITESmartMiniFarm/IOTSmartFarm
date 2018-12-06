@@ -83,9 +83,7 @@
 
     <link rel="stylesheet" href="css_dir/style.css" />
 
-    <!-- CanvasJS -->
-    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  
 
     <!-- Head for water measure-->
 <script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
@@ -94,8 +92,15 @@
 <script src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-plus-ui.min.js"></script>
 <script src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-ui-slider-pips.js"></script>
 
+  <!-- CanvasJS -->
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
     <!-- Jquery Script -->
     <script src="js/click_jquery.js"></script>
+
+    <!-- Mongo to CSV Script -->
+    <script src="js/mongotocsv.js"></script>
 
      
     
@@ -583,7 +588,7 @@ FusionCharts.ready(function(){
   var fusioncharts = new FusionCharts({
   "type": "cylinder",
   "dataFormat": "json",
-  "id": "fuelMeter",
+  // "id": "fuelMeter",
   "renderAt": "chart-container",
   "width": "200",
   "height": "350",
@@ -593,7 +598,7 @@ FusionCharts.ready(function(){
           "caption": "Water Level in Bucket",
           "subcaption": "",
           "lowerLimit": "0",
-          "upperLimit": "15",
+          "upperLimit": "13",
           "lowerLimitDisplay": "Empty",
           "upperLimitDisplay": "Full",
           "numberSuffix": " ltrs",
@@ -607,14 +612,14 @@ FusionCharts.ready(function(){
   });
 
 
-function measure_water(test){
-  console.log('Measure_water is ' + test )
+function measure_water(water){
+  console.log('Measure_water is ' + water )
   FusionCharts.ready(function(){
   
   var fusioncharts = new FusionCharts({
   "type": "cylinder",
   "dataFormat": "json",
-  "id": "fuelMeter_edit",
+  // "id": "fuelMeter_edit",
   "renderAt": "chart-container",
   "width": "200",
   "height": "350",
@@ -624,14 +629,14 @@ function measure_water(test){
           "caption": "Water Level in Bucket",
           "subcaption": "",
           "lowerLimit": "0",
-          "upperLimit": "20",
+          "upperLimit": "13",
           "lowerLimitDisplay": "Empty",
           "upperLimitDisplay": "Full",
           "numberSuffix": " ltrs",
           "showValue": "1",
           "chartBottomMargin": "25"
       },
-      "value": test
+      "value": water
   }
 });
   fusioncharts.render();
@@ -754,7 +759,31 @@ function measure_water(test){
                     </div>
                   </div>
             </div>
-            </div>
+            <div class="col-lg-4">
+              <div class="card  bg-light mb-3">
+                  <h5 class="card-header" style="color:black">You Can Analysis Data Sensor</h5>
+                  <div class="card-body">
+                      <p style="font-size:18px"><kbd>Just Press here (Save to CSV)</kbd></p>
+                      <div>
+                      <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button" onclick="SaveTemp()">
+              Save Temperature to CSV
+            </button>
+          </div>
+
+          <div style="margin-top:20px">
+            <button
+            class="btn btn-outline-success my-2 my-sm-0"
+            type="button" onclick="SaveHumid()">
+            Save Humidity to CSV
+          </button>
+        </div>
+
+                  </div>
+                </div>
+          </div>
+          </div>
             
         </div>
       </div>
