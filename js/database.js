@@ -84,11 +84,13 @@ function signUp() {
     promise
         .then(
         function (result) {
-            swal("Congrats!", ", Your account is created!", "success", { button: false });
+            swal("Congrats!", ", Your account is created!", "success").then(function(){
+                    
+                window.location.href = "index.html"
+  
+        });
 
-            setTimeout(function () {
-                location.reload();
-            }, 2000);
+            
             firebase.auth().signOut()
         }
         
@@ -131,11 +133,13 @@ function signIn() {
 function logout() {
     firebase.auth().signOut().then(
         function(result){
-            swal("Good Bye!", "Your accout is Logout!", "success");
-            console.log('Logout!');
-            setTimeout(function () {
-                location.reload();
-            }, 1200);
+            swal("Good Bye!", "Your accout is Logout!", "success").then(function(){
+                    
+                window.location.href = "index.html"
+  
+        });
+            console.log('Logout!')
+            
         }
     )
 }

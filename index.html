@@ -460,15 +460,19 @@
             var account = firebase.auth();
             account.onAuthStateChanged(function(user) {
               if (user) {
-                swal("Your Welcome", "You can access This Page!", "success");
-                setTimeout(function() {
-                  location.href = "organ.html";
-                }, 1500);
+                swal("Your Welcome", "You can access This Page!", "success").then(function(){
+                    
+                    window.location.href = "organ.html"
+      
+            });
+                
               } else {
-                swal("Login For This Page", "", "error");
-                setTimeout(function() {
-                  location.reload();
-                }, 1200);
+                swal("Login For This Page", "", "error").then(function(){
+                    
+                    window.location.href = "index.html"
+      
+            });
+                
               }
             });
           });
@@ -501,15 +505,17 @@
             var account = firebase.auth();
             account.onAuthStateChanged(function(user) {
               if (user) {
-                swal("Your Welcome", "You can access This Page!", "success");
-                setTimeout(function() {
-                  location.href = "hydro.html";
-                }, 1500);
+                swal("Your Welcome", "You can access This Page!", "success").then(function(){
+                    
+                    window.location.href = "hydro.html"
+      
+            });
               } else {
-                swal("Login For This Page", "", "error");
-                setTimeout(function() {
-                  location.reload();
-                }, 1200);
+                swal("Login For This Page", "", "error").then(function(){
+                    
+                    window.location.href = "index.html"
+      
+            });
               }
             });
           });
